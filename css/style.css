@@ -621,6 +621,7 @@ input:hover {
 .calculator__wrapper {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .calculator__form {
