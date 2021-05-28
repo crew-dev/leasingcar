@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Название заголовка</title>
+	<meta name="description" content="Содержимое мета-тега Description" />
+	<link rel="stylesheet" href="fonts/font.css">
+	<link rel="stylesheet" href="css/style.css">
+    <meta name="robots" content="noindex, nofollow" />
+
+</head>
+
+<!--sprite-->
+<svg style="display: none;">
+	<symbol id="logo" viewBox="0 0 127 60">
+		 <image id="logo" width="100" height="60" xlink:href="data:img/png;base64,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"/>
+	</symbol>
+
+  <symbol id="whatsapp" viewBox="0 0 24 24">
+	  <image id="whatsapp" width="24" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACX0lEQVRIiY2Wu2sVURDGP73GQESSGLAQcg2CKNqIhWKhYMDO1oCJ0VJLUdD8AXZibJQUYqHiCw0IFpIiSDBY2GiMiY9U8YWNScD3I/nJwCwOJ2fvzcBc9sz55vv2zM7O3mWAali7pC5JnZK2Smpx6KykSUnDku5IeldKYQIZrwLXgXnq21/gBrA+w5MV6Aa+JLRG8gx44P4U+JNgLKennsCpJOk5cARozdxIC9ALjCU5p8sEegLIStMHrMgQp15xbCxnbypg9fsayLsyRPX8QBD5BnREgZtBvc9jdvcDwLU6xNH7As+tQsCUFjw45ke2+NkA7syQ5bwSnolxbpA/lMK6+Q/8HuL3M2Rl3h2rYYEhX/wGmjypMemMyRKynDc5l9mQBd76YjwBTwSBfRmiWj7uedPLJbX6S/0xeckvhevqohFQ2wquZhNY8MVCkjIg6YVfX/B5tFRriLPojR/nZebIm4FZ3/8JHAp7q4DtoeuiT3nOlC0GQ1utzYB3BhGzq8DeUOfPPuyqjm8P2EELHA2B4xkB803Aa2rbYceeDKhjFmgLPW8dtTIjUJSkP7RgtGGgAVgNfPD4D2BNkTziwV8OzAkUvs7v0spy1ydwo+9dDqLn4yya8eCTDOFS/Uwgt1M0FwIbw8bFQNbhM7+egDXG7cBh5d4Vx/XBsHnPp+B7X88B54AdybfBWnO3l2EuId+ffnD6Fz2yvNnDnQY+lXyrXwHb0hPaz2gGbHPoSjhJLbN6nyjrPvvbMiFpTtIjSaOSHkua8Re9ImmPj4ktkto8bvuW91DSiKT57AiR9A9igYdzngbcoAAAAABJRU5ErkJggg=="/>
+  </symbol>
+
+  <symbol id="telegram" viewBox="0 0 24 20">
+	  <image id="telegram" width="24" height="20" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAYAAACXtf2DAAABkklEQVQ4ja2VvSvFURjHv1wvC4vXbrHexaCUGJRFLBbDLZPXkpWUQfkHGK1YjJQyKGWQiZJyBy+xWNyQQgrRR4fz43d/57i47ree+vW8fL+n85zn+RUAyjOaJQ1LSko6lxHIg1UD40CKTLz+hzwGdAMrwDN+pIpyuJ2EpEFJ/ZLiIf+TpH1JrSHfju9kPisDhoBt7zlhE+gCTiL+ER9Z2NqAeeDeofzAFdAHNAFpJwqNPtI4MAkcO+mZWAAqgQ7g1onCg+lTQFoM9ABrwIuTmolDoN3W9WZp8Nb7CNjndemEXTwC00CpJR9zMjIxEwj8dBXYJiYssRnOWSfDRTIQiNlmmqLTSNo1MGBJTW4JsORQ+VEfCEStAZgC5oCqUKwc2PBSubgI6nwCPqsB9hya77EacBQ6c+rHjKQmb8SP3cD7W4Fqx5MdfxaoCH3fSMq24/mPwJmkFkmdktJO1geOJN19yfmbGjXzXM0iqwv5TePXPW1eDNf+VmDZ/lSifjMfE5F1MZqLwE/WDBzY7Vr7mQ96A2+6n9qTyTP4AAAAAElFTkSuQmCC"/>
+  </symbol>
+
+  <symbol id="support" viewBox="0 0 47 47">
+	  <image id="support" width="47" height="47" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAvCAYAAABzJ5OsAAADkUlEQVRoge2aTWhUVxTHf6M2oLQYa/xYRUqNH4hIaRCyLwqBgiCk1CouxE0RFxbdxIW4dOcqi9puqgvFRf1CKO3OUiSlbZZtXbRVKU2rbZG0sRL/5ZozePPOveO8eTMJA/nBIW/OPfd//pl338v7SE0SbWAFsAt4C9gBbAJWA0uBGeAB8AMwAXwOfAb8U7ltMF8htkg6J+mRyvHI5m2p0t8lmow+SR9KepqxHMx9L+k7+5n75Z6aTt98md8labJgYlrSZUn7JPUn5mD5fVY3XZg/abqpednIDmTiaOHbfizpjKR1mfpcrLN5jwt74WimPhnJZCZOFL6tryQNZGqbjQHTiTnRbvMHCg0+ktSTqGslekwv5kC7zG+TNBUJj0mqJeqqRM1060xZ34aaLlGIJZJuR6JXO2C8HjXTr3Pb+qdqmzJ/MBK7L6k3UdPO6LU+dQ420naJKJZJuhMJjSRqOhEjUc875iPZxyWiGI5EJjq4XFLLZyLqPZyoeRZL3PXCc/ZH22fDlYSr6AyyfnX257rkLsxqwCTQB/wHrAX+dlWdY6X17wH+sP7OaO6b32zGA+PzbBzrN27bfebHkTO/Ndoed6PzQ9x3a6rjMpeZpT/a7gWOAL/bdfifrrp9rLL7gjW2nfLznNRRLGlUaf7q4ClzxPRTjCbqs8vmJZeZJRxIF4BBN1KNQdNdmVFJ+qmbD2eXITeaJiy1Y8mR1jnWYAkXGTK/z8yH09EVYMyV5XkjO9IaZfTGzG9PMH8SeNuVNGZ5w9HylNULfk8G84fdUHdwOJhf36Xm1+fONl3BovmFYtH8QrFofqHoevNTLtsdTAXz17rU/LVg/jhwvzDgbnYLPHGZapTVC36PB/P3gJ12M1DnZ1c+l59cphpl9C6Y33vu1sri1Qa3ZGr2KW6JKD6FLnIqpZU72zwE3gOm3Qh8DJx32WqcN91SNLr1ugFsB963Rw/h4c+lJg/wms19DfgF+NZVzCUcY4eAT4ERe1YTNHa7ypjU7qgYGyV9Xdjt45JeL6m7J5pfatm0yivAF8CbhfmDln+5hO5AtP2vG33BsmmFQ9kHRLABuAj82IRueATybvT5S1fRAfM7XWYuwy7zYm4Ct1JV7V42yd3bIuEg/gR4Jzc994i7VfYClxvM/QD4pgntGftfhd/cSEzqKK74VuO6+xMzS9tfxnXiVBneq56WdNdM/2qf2/XedjYk/geUXriNo2igkgAAAABJRU5ErkJggg=="/>
+  </symbol>
+
+  <symbol id="future" viewBox="0 0 47 45">
+	<image id="future" width="47" height="45" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAtCAYAAAA+7zKnAAAEDUlEQVRogdWaTWhVRxTHf8Y0idaiQgUVLV1YaCJWpK2kSKs0JULpqi66CW2hG6GLCtm47Er8SKm0oFsXLqoLodAGo9ZGpFCSSq3FjwYLoTWNYMGIH001yb8MOdeMd+Ym7+O+15s/HN7cc8+c+d+5c2fOzHkLJJED1gGvAy9ZeQ3wDNBorseAUeA34BLwg5WzsAw4CjwHfAD8HLVz5CuUjZIOSPpDlWFY0mfmx+ewQtKvnseeLH6BogTZLun7WehOSRqRdFnSRUnXJN2UNBFYzuCcpE5JayRdTd07mMWpMXgV2WgDPgc6Uxb3gV7grA2HIeDfiJcWYD2wCXjb/Dxt994wue/p5kbsiVLivotPJI2neuSCpC5JiyJ1ShFX7317O7Mhs+cDRUoWSzqRcjwk6Z2IbaWyQdK9SsjPNmxWAN8Cr9r1FLAP+BR4GFhXBjeETpU1VDxkkV9q4/gVu74D7AC+Cyyrw37g2Tk8TAUaQ0OgmX6grz3iI8BrNSDucNp9doF2Bg+AbwKtIbZI9QDdVv7bZoGrQc38sAhozvDmZp9HgTaDfAdwxsoTwDab/goJf9i4efiwd727yMRJkd8JvGDlQeBgYF0eXGe0229tYHNmi6RRb25tj82rZUqv+erNcU14QpKefxdYaeU+4Mcceqot9Zs7EvIfeo6rHS51Q4PF3W9ag3/ZijdvyG8FFtr1ydlWtKLBkd/scTozP2hPo4EnP6jLgUWB4cg/79G7Np/IuyBsiZX/yTHU9bEauBhoZzBusVSpq/lHtqAewjbCDmOxhaAK+T3YVmTjqzLaGTEv1xvtyR2agmesDnuAjzPC7nTPfxlos7HM7ky4qPIn4GVTNNdo6OSFJm9zf8H1yrDn+MUCEyfFb9iRv+Ip1gfmxYLP74ojP+Ap3io4eZ/fgBvzLra5bSGCi23WFjREcB39p029k8Byp7hrp13YjfSJWFHQafwwvneTaeyIR3BXQcn7vKb51nAnlae0e9xGje/jBWTcTsMSfOGFyf83FhqfBPseL6xe77TYOWSC7oL0enfqnLQl66C1wzN8JGlLxFk9ZYvxSNDhtx0j0uMZ35LUGrGph7Ra+wmCDEmMRKOkfq/SDUltEbtaSqu1m6DfeM1J3slSSYNe5bH0K6uhdFh7CQaNT9BmoPDEJbYGPCeTkvZIaorY5iFN5n/Sa3PAeET9B4qU1CMzgvkbSrVzwtqP2ZdEnhrnpLrMj49xa29BpE7Z5BNxH22fQrh80nFJOy2/1Bypi+k3mN3xjDxUXzmTQyy5MBe22/H3tgw7WbZ7zBIDT9nWbZXLBwTW0+gH9to5acmoJn2/EegC3rMwuly48PaYpel/qYRAPf574DIsLuy+AVy3/x6ct3LlAP4DRHEBJPIV//oAAAAASUVORK5CYII="/>
+  </symbol>
+
+  <symbol id="income" viewBox="0 0 47 47">
+	<image id="income" width="47" height="47" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAvCAYAAABzJ5OsAAAExklEQVRogc2ZaahVVRTHfw45IIX5QJNKzUYUmnlQFlE2QpNZFFgYpmGRA/Ulmohs+FRCBGkZ70UTPC2sL0FlNFlhIxlGZoETFYb5UBzTf2zPtnveWeuce8+75z77weK9u/bae6+9zz5rr71PP0m0kHHANGAycAYwIna1DVgNfAi8BvzSKxeC8y2Q0ZI6Jf2j+hyQtFTS2LJ+GEUFcrmkvxpwOst2SVMPp/M3Sdpn3ErYKWmKpCskbTOlCeEpzHTadcVV9lLaJe017tToSrW7yJTW2C9pcl86P1jSWuNGbcZvkdQvU+daSd3GOmGTpKOcflri/HzTfY3pjn16AHk86tj3kCpCZb8Y6k40JUlIbAMOAGOBOUB/YDHwc7RZD4wxNWELcCywz5RUGCrPzJm5wJqU3dyUfnFK/7WpVaNw7Q80oynPBQU1wtMYHp/AImA8MA+4DVgDjALOMbVqTAJWGG2FM/+0ma+ePO+s863GyqfT6e8/6W9GU562OjVmAy8CQ+Pvd2KqsNJYWoYbTYoqnN9hNJaZwCpgQizZCFwCvG0se7LTaCp2foPR9OR74E1gIvAVMCOW7gXuLIwmySDz8dZSSbnYXa0JWyQNie11pPR3p/pYZWrVuLHIlyqizefA38DRpiSZ1d3x/5eA0+P/61M2Q0ythD3A+0abxhtRL+QZM2c1zi9ob0JMxjw6HPuWpAejCvKU3ySd7NQJOf8Pxjpht6TxTp2WOE/MYfIIydnDKdt5MX/P4z6nfSNG0aQszHEm8LukkZKGS1pnSmt0OBmoK66yCQmdLjDu1NgjaVdB+bOSBjTav1FUJFdK+tW4ls9mSTeU7dsoKpQjJN0q6YP4AmYJp66PJd0haWhv+m311cchBgOnxjwo5P9bgbX1tv96tML5kIDtj9t/S6kitwk75O3AuzFv3xl3xz+BpcDVcbarx1tLJeQ6SRvMaraslHRKBe9T/3hyG9Xsmn8CeMBo8+mOp6jwN01YYt8Bm3JrJoR35nXg7JgzXeWNrhF50Mxtc4T4f1FBvyEi7cj00FW05sN58xVgeea0dBawwFg3xyBgqtNCyFS7gCXAsEzZT94oj5T0VCY2L0mVX1PxrB9iSsaPCyWtN1YJL0galF7zISJMB54ERmdGGYzOBb6Nv0OefamZJ5+Q6y8EtrulyZ1OOCJ+GX8PAB4BHnKiYYhms4BliVfJKM+rc6IJfJpKmCY2eH0duNd5unkyLkYmj88kjcmmB7MdwzxuTlV+LscmS1cDyVbINOfk3B6Hi9fHvDbCTL4av140wsYYsnbFrxzrco5/WbrjI/cIm9zInI1sU/TtE1MSl017wVHMI30Beo9TXhVvSRrhPCWTVXaW6DCcio6P9QZK+tFYNEfI9+/ynM1z/pg6x7Isb6QaucyU9p4QFE7zHPUkrby/ZJeTUnWXm9JyhIPLrJi7uI56ko7zgw/uWnCCeTF8vgHaY5w+CXjPict5hMzzj7hvhGz0o5jjlCMzoutLztgMb0b6SrysckW8BG2EzcBxpWesIrzHPL/EI2z5aakIz/nV8ZtRPV6OXy4OHznrs63g68UXcWPz6vWpFHU2N+N0uFuZ1uhtVl9IUSdh9wz3KuEE87ikYf8Xpw+KxL/d4mMT0K0dUQAAAABJRU5ErkJggg=="/>
+  </symbol>
+
+  <symbol id="car" viewBox="0 0 51 20">
+	<image id="car" width="51" height="20" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAUCAYAAAAgCAWkAAADg0lEQVRYhbWXXYiVVRSGH8ejotToiOaIZYKCKUmOZheRNU0loShCERWCXnShxoh4IxKoURdFgekM/V4MQUQzEEhUDij+YZAT5DF/RkX8wwIdFHVGx6yZNza8B7/5vn3ozMyZF14OZ++91tpr77XWXt8wSQwQw4EFwNPALOAx4BGgEngQyFltJ3AD+As4AxwHfgXagLsDNR5Df50ZASwD3gBeAMYl5v4FLgC37MA04FGgHagCHgIqEuu7gd1AC7ATuJ2x1l8EZ0rgZEkfSrqq+2iX1CjpNUnTJeVSerZ65Vz/Hy5phqQ3JTVIOpXQdVPSNklTS9xPlNHBBMdK+khSd8LwLklzImvTTDsTY9DznqTLXntP0qeSqiNrS3Ym59N9WVK9pO2SfpJ03UYuSdos6Y5ZF1M2AGcKHCFphaSzlumy/AORtUUZcibE8ulU/BfwJ9AAbAPuAXXAj8DozMqhQUjoa2YoHr8Bh4CDQE/aYnBmLnAE+MPJGITOmp2RLdYC6zOjWYTqNhPYD9zMzJaGShePScDkhEQH0Axs9z4zzhwGWj3+QRnK5lZgC1AD5IFgZ3lqvj+YaF1LgVfsXLidb4CNwBUc02mMKxaX/WA6Z1albAxGd4Wk1yUdsa6LkiYk6/639rymSHgNFj8k9NcMUlcv8B0wD3gfmApsSjrT4XDIJ5IrvPL1wDGP3XYoPpdR//+4ntCfL1FmCvCZC1EoBpeBRj/AeOxdH/4zFRnx+xjp09wBzAB+cXFY5KSuz0iUF7OB34HVvol91v42cNQFBnce4aBGBWf+8WAutZVNwGLfRLjGZx0eT/mkPgHmD5EjYS/fO+nr3RbVeR8h2asdZn0vQ9IYv/DnJU1JtB7XJF0p8nDVOfG+jswN5NFMc4llP4/MBTZ5/kX/vyApHzy7A3zsxvCcS11oJMcDPwNdmXODvc6xBZmZ8qBw481FtLX4t29k2LNhLp0nU+WzKXIqBV7V0KM2Yhe3XWnkY58AC4GVwKvA38D0yO2E/DnggtCeObfBI7z8z7uSrY1o+wp4C9iT+HTYF/O6wHfseWg4qxLjT7jx7JH0ZESuHAyP4glJvZLWOHIK4+u8r6P+n+maY8zZkUIXu0dSmw0EbIjIlJOPuwAFnJPU6kQPCOOzin0CFGOoauEkjlvJXUl7Jb00xI4U+LCkLyV12H7I0y/8sdh3rcR/78NgHJawWZsAAAAASUVORK5CYII="/>
+  </symbol>
+
+  <symbol id="water-transport" viewBox="0 0 60 28">
+	 <image id="water-transport" width="60" height="28" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAcCAYAAAA9UNxEAAACo0lEQVRYhd2ZzUsVURjGf7fiqhW1SYgisFUftImIikIoI/ogWlhBoLYJgkBqFQUR/gEFLaLaSIGBkH1tWoTltojKhWhCECEKUS5MqE3RG4f7TAxz5urMdL3e8YGX8/GemXOe836cM/cWzIyU2AO0AAU9Ngz0lXnFJaAeuAFMedp5QBbCE8CaSN8ZoNsbWSK5ElgPfPa084BFGaYMFj4APFH9FrDDG1mDyEL4ncr3QCvwFCgCj4HV3ugaQxbCb1VuA1w8dAAf5OYPRb5msSTFwoJktU7t7UCX6oPAJmC3Etig+utVXsiYtIaAR17vfyBp0loGfAGWe5q5Rztwv1KzJLVwq8hOyG2rgSbgGHBHYTRakTmdhRPIgJVwJeH4SshiM3upeYfMrKES703i0m6nP4XqYxF99HKRtJ0ELuuf1bhunfdzbuGr2uUXMTonU9I3pWxnQVvM/Klkthh218fTqt/ztCXcBhqA6ZTtNKhcPM+yO82ywrSZLY3R5y6e4ywc/jhoUZ87ki56I6uLj8A+YIvO5jcZZh+OJq064Cuwwhu6QBC18AGRdaR7FwjHrUCz6r1RH+9RnFyP8/8cymYzmxSn52ZWDLt02J13Aa+9vcp+5larHYa7878C1ire9wI/w1Y7qp0YM7NCGWtmPXOr1Q6k0cxGpRsxs1VxWfqkyj599sUh65lbrTa68z8DNgDjykuT/7RiXmdm37UjO2Msmxcpmlm/eHwzs43lzuEgO/8GDgEHY6ybB7jcsx/4ARyJu5EFSasHaMspySh+iWx/nNIRDmfnu5F4yAuOKxv/AU4BD8quO2F2rmXpDH11nUtylw6ys7svn/d2pLbRCFzWCrv0c/GMcBYdlzvkGTeBziTrd4RPAIdDf53kDSPANcXvzAD+Ai3pzpBf5fQDAAAAAElFTkSuQmCC"/>
+  </symbol>
+
+  <symbol id="cargo" viewBox="0 0 51 30">
+	  <image id="cargo" width="51" height="30" xlink:href="data:img/png;base64,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"/>
+  </symbol>
+
+  <symbol id="commercial" viewBox="0 0 51 32">
+	  <image id="commercial" width="51" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAgCAYAAAC/40AfAAADa0lEQVRYhdWZeYjNURTHP8NYZixRSDQaUVP2hBRKSkT2JUuypETkD7L8IxQp/qApf0iYUv4g2RKRCCkxIVuJsiQ7yZL1qzPO0/V+v3nvzRjz3vvWqTfn/O4959xz77nn3CmQhKMJ0A5oSPbxDXgG/KiRJZKaSNou6bNyCx8kbZTU0BY8EyoEtgELgPvApRqvxv+B2TUYWA18B9ZkosW22RfgEdAL+Bz5IntoCdwCWgOdgDfpLLEVaOwRybYjBcBiYIzbZGgENAMWAhsiI5Lhp2RPpvvyP9KqFCf2uaSm6XQ3iHiXPUwCPgHtPUpGZt81z7Kz0lmWS87YlnoJPA94dm+s89/L0tmbUpgjOOzRKQNGpzIpH5wJo7MyIg2QD84QRGcQMDAidRRGONnDe6AHMMXPTjJOAn2A5cDkiJTcSs1jJf2IJOV4bJVUnDxHLkXmCNAfGJVmx0wDlnoymAec/yPJochkSnZ5bvYo/vQoFdlYq80sW3wEXkXWoH6wC1gPHAe6BRrXuywO1qYMB3YAJcBBu3RThTOXcSPJ8YlAq0RkKoA5eeTMO28NLgB9PTqd8+WeicNNYDxwJiHL122G30mHPDJVyFdnHrsz40Jmqm1W4Hn8qj8wWEd6EZgQ+bLuYMXkPuCt12QPgc3ebYbo7bzW/v1vgz0BmJE7nXfAU3WF9xBfgcteovfztGgKVnjvMfIfXbnt8w8DjgLFwL2glW8LPACGAE99zIygG53vNVtnYoqFUkmL/PclSR2Cy6xM0k2XWfkxNDK65rBLr5WkV/YeIWlqoK+xv9AYTgf8dzFaSquLTCXQscpbeJG0krYV7gDngOl1FJkBQLm/xmyK+eYEMALo6VksZWTCcqa5846lKC8qJb2P4deW9rjOLtWMn+vyOTGyxNjSRDab7RTiZ2R9/kYLP6R1iere7BJ6djvFwpzZ6zdoCDt4Q4E2MTVbV88m1qvfjZu0FjA93b1P2RIzPNG/XPSbPxmWqp/EhdRoiYfurKS2Ad+Sw/UgAcSNrQ1ZAngt6VPSvIWS1rq+M+nmjTCcGkja75N8lHTKJ/vivK0xY/6VRgbv3bZgRyQ99r8fSiqprTP4g/VCSXd8QusdrkiaGfNtXVEvSYcCp15KKk/aHdVS+C+NVCjyhGBVQH3AKpPm/i6QGYBf1xNuoAsU30MAAAAASUVORK5CYII="/>
+  </symbol>
+
+  <symbol id="train" viewBox="0 0 50 32">
+	<image id="train" width="50" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAgCAYAAABQISshAAADZElEQVRYhd2YW4hNURjHf8wRKaFxJ5T7ZTJupdxOLvGAwriUSIknRSTXMiJKisILEUUSMlIuIfPAwxB5UHIpl5AybpER8WnZ/63trH1mznCOzpl/fe1z1vettfZ3X2s3MrOlQE8KHE6RSmBsQ1CkA9DM4/wdhgIngGpgIvAhg1VaAJeAdsAs4JYnkQESgFOkVRaUaAxsd8YB9gOtRXXBhXZ74BzwBuheh3wsGlRolQFdPE720ATYDDQFNgHvc7KLmeWayi3A3lzu4zziKZdFlAI3gedACfApVxu5ZB8FtPE42UG59jgNTMhgxR/Aa+AF8Mzj1oJ8TvanQAWwC3jicVOQzWSfDEwCdsii6TAdGKMC8DZGxvWVfsA4leXvwF5gNfDFkw4Rlzh/SWFSl9Yxf5fkusfwopQws5lm9lDyt82sa4zcL3JNzIWWKT7XS7/dGgvpI9Bb1nqZwrvoWSewZHWK3HFP6k84DzyPyH8DTkbOgYOBG8AIb6YS8Y6eI4FeGi+RS68p7HoAnYCvQEeFziNgGNDHWzWQKVacP9HmcXJRrAI6A1VpQqiR3tEZfhFwNMp0HlkOTPGmBaUyCezxOIGlklKmNhyS3KtaZEI4g6I1kzE0VnlYAxwBtkq534rkCzYC14F5wJo073RZ3n0ArNUBtXm+KeLCdobC0Vl7ricR4L6UuQLMBM4CRWGyv/PEoaWSbqfHgWXiDfI4f2Kj5Lp5nADJlILgrDtVxeVYCi9KrmyP1xquSCxJKKHDg9xJPQ+lHO5cXN7V/eKgEjlElfd6geuPqMqFuOpJBZXtTOT/ZxWHUcrdYm+GD5c3i716nEd9JFOqNLOvziNbgIGenvVHX83YWcfNsETPffJAOhxQ/FcoGjZE5CoUCdvU/wg1ykcsl0dM7xj1kEOFmbUzsxozqyrk0GpuZue11sKEkqVDGvfWB6WSnRb5HYf+GitTstcXRbrXz1c1PAUcLuQ7+yedtF2Of3eKpF6sFuiovVpl1GEdMBxYATzWWLn6yGwd8P4Vruc4T85Rc0QFwWFJytrvdICsCQeih8YQxVJkgmp8SaTxueazEhgCDADu6ZtUNjBaIZmUpV3XbqvKVRmzflPRLzSYz0HOExcyuUrmO3L9FeW/IaHLfW3lsmAUcVfJwlYE+AnatfjxC7qx7AAAAABJRU5ErkJggg=="/>
+  </symbol>
+
+  <symbol id="printer" viewBox="0 0 51 46">
+	<image id="printer" width="51" height="46" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAuCAYAAACF6SFvAAAEu0lEQVRoge2aXYhVVRTHf46jEZFaKTo56S0NJZTGok+0hCAki8p6iTQHfYi+g+qhIhGDDHwwKIp6iHqwonpwyKDoQSO/ygqNCqz8KCqnMpvUmjSnFbv7P3ru3uceZ5+5R2/gHzZz7tprf/z3XmftvdaZQWZGJIYCC4HpwCmxjY+Cv4BPgOeBvfmqIWLJDAHeA64MahqLr4HLgF9jem0NJPm4TUTeAu4DfsvVjofb6ceA24EHgYejenA7E1FetiomRbaLKSeb2UEzWxvbtiVgl4+zgT5gW67WwNALfAecE9tLLJkK8D1wKCW7AHgJuLqAbHKGzGEn0AacFMwgBzFk3Ms/lupAaYwD5gPnFZCNyZAlZBzGB7PIQQyZs6TvkykDyRiVssgkHTctmRjXnCbjzOImYLDs3mEWMELP/ZVVMmTuHCtEJnBvOWWJ3PJMM3vdysPHZtau3l/JmU9Qiu7MUD1fB+wPNItjlazlR+Dvss2sT645wVqgJ9AsjsTl/6OzpjCZIToz2gKtKs7V5e/aHJ1GYDhwA3AAmADMETkfe4BNOmSrkN3NMbNdBd6CEVm2O4DSE4yQj71mdncyntuZq4A3xPBpYLt4XgzcArwKfAQs1zXmGYUAU4K1agzc+7IMuBG4AngcOB24C3gXeEejuAN3geb8J/CiY7TOzA6Z2aXeinZqTTr122GNnleWuDOb9fyUxqjIgzos9vTHq023mbW4Q/MS4ENgY4nvQVn4FugCRjtn0aKD75f/IZEESUw1LDY4awful5dxuKPGmwwc7pY8SmNMi+0thkyvSCxPyZ4ItAaOM70xDpRB5iKdNccS3cAuYFKjyXyh0rSIjTSbGifINCtOkGlWJN5sJDDTm+Pk1F+/7lijQ+NVMubSnjy4XHN05rxJMS3Zma3Aa94c3Wpcr4vc5uM8/4rya+8Da7y6Wbosk1ztV2Zcx/0Q4HiWeiFAOlTo8G8AK4DZdTKJblXOD6Tl4ofDq16Lz4DfgRlpqU/mZ2VfsmJuF/X9AXyjBPow4HMlOUYr8nNR6j7pj5F8WyqDk8h6FIv4mAoclNmPVX5uZKBVTarsC6QRZpYXaS7U70dT7VdJNkW/h5vZTjPrM7MZGeMViTRrzKxR50yXsiVLgDf1ks5WBJtcTp+T+S4FPgh6iMMi4CG/RWxw1qGJ+smM3fIqK5S2dVgNzHObD8xVcsSRWxz0WouJGmNiUHMEC2Sqy3wyzubPCNRDbFVcUe975ibVVxTIdUvuPho9q/fmVu/bThbcp8BkjN11kozXaN7o3XXY78zsU30M7Qia1MLdBAapdAW1Vbhd2JEiglbvVOCBfn5x25IaZ1QdMl9qcdt0Frocxo5WbfvbMgtn11+pwXTvbxrjAkl9bFFW0l1DXqirdQQuR9bpyZKrlVvwpM6F13dK/57/dkoeYV6BbGJ/82atZrZR+nMz6n1vFoNeM3skaZ/+PwBnq5dr647m5e5V9uS0OmbgY4KuRKbV3R5oVNGjfPaioCbET3Ioew7XZKxOf0qRjOZ8tVmv3crSSZ8z0SXWNfuYmnkSZ8O9OxvkbJbKjfsYHEgiUOR/Z1Ci/eZA2hg473phkZ6K7syTJaad1hVqBfwLhLYUHBcqS5wAAAAASUVORK5CYII="/>
+  </symbol>
+
+  <symbol id="plane" viewBox="0 0 50 50">
+	<image id="plane" width="50" height="50" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEXUlEQVRogc2YXYhVVRTHf2PTNH70pVKaZWNILxFJQUgQCRWIFGQv9lKJTz0GJQVBSk8+TOFT4ksZ+RATfUAFfVCUED4UJpUUfaioMVli2mhTZv1j5bqxO2fvM+fce869Z8Hi3rvX/6y71/nvtdfae0gSJWUB8AFwcQb+F7AJ2FnWURNSNZAjwCjwA3DWxy/3z5uBL3JP9UsskAq6VefkoeCZu33sa0nzKvqrTaswYrIY2A/8DCwHzvj4OPAI8BGw18fMtgt4M+elCenijcRYOV/SbsXl8YiP2rUbh4slTUs6JGkkGF8q6biHcr+kWyQdkXQy4qN2ndUFyZPAduAqYEMwfgh40L8/AVwE//r/O+ehJUuriBXT8cwCa+3SKsqVbL48G3muFbtWKKkdzGSp716z+1VfusmRjqRyhSBfrHi+DMzLPV2zGCPLgKvdrb3dfRX+oogVgvoyAWzzsSlnKIvtTSSdziTnbbE1WKCpXCmqLwckXRvB95Tsnfais9t8GAMWaNEORqa+TEja7t9fjWB7DuR1H3jbf6+KgQu0iBUy/dgiXwWfRnC1BbKyIVYIGP/TPzdHMLUF0iQrYb68I+m8CKbWQJpkpZMvhrs+Yq81kCZZoanzSyqQJlkhyJedEVtXagXRepRp4KdMibE2Y8irdJU+xorkiFf+VNEbBpb498MzdMjTPof3gVeA73MIr+w2yV+BAzlrO2Shv5xZ/kJf8G7h+P9ml1habdNLJT0g6XOf70FJN4RztCj/AO4Ctni3mhJbCluB1W5/0tVkrduWJHAbI7jlJXDzHWfXTTf6HcBJ7w0/A14ClnUYudN7H5PvJN2eYGNFppAddA13qxUJ3N4IblUJ3FiAS8mU+etMco6kpyWddfBzkuZnAhlxx5f47ytdceyYY2K4KyK40RK44QAX0w0+33ezb/0mSXvceFTSfRFm2qbG4onYpOwtbJT0mwf0llfkGHbQusCCkLS/6Kh7jZ8A7wBOAy/6xtAWuQBY4/Xu0TJv1La9Y4lEG7TYqnlK0lARI6HMAS7LjebFtu/dXrlXAqdyiHNi5/nNwCfAuoqdQyiT/62SCAO96MPO0JYCH9f5weoXuy+I2LtuGuvS2ZImJZ2StDDhc66kfR7s2oi9FYGUYWOHY2o9r9cZSBk21mc2hnURzMADmYmNMC/ukfS7pF0RXNfay01jR2ynesxrzXjOCnP9gs52vuf91nF4hjNIdekDGzuUlzOSVkewXWsvl9g4G3ZleiEwBhzL2Nc7C3u8M8CZeA/4KudtgIwUsdFIvUhp0lBCi3aqxupFSpOGHtno5MW2iK1VgRSxEdYLs6+JPN+aQFJshHmxybvTbyLPtyKQFBvZvLC73i99q435GXggKTbCenEiOGFORHzUrlXrSKpudOrFUeBHH7Nzwsd+lTOV81S31MBGX+tFSqswMurXqouAN4Iry1v9fH8v8FruqT5JlUBsKX3rDV9WnvH72MEI8A+ciePKeoLz8QAAAABJRU5ErkJggg=="/>
+  </symbol>
+
+  <symbol id="special-equipment" viewBox="0 0 50 41">
+	  <image id="special-equipment" width="50" height="41" xlink:href="data:img/png;base64,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"/>
+  </symbol>
+
+  </svg>
+  <!--/.sprite-->
+
+<!--block_1-->
+<!--header-->
+<header id="header" class="header">
+    <div class="container">
+    <div class="header__top">
+        <div class="header__logo">
+            <svg class="logo"><use xlink:href="#logo"></use></svg>
+            <span class="header__vl"></span>
+              <p class="header__text">Автомобиль в лизинг<br> для физических и юридических лиц</p>
+        </div><!--/.header__logo-->
+        <div class="header__contact">
+            <a href="#" target="_blank"><svg class="header__ico"><use xlink:href="#whatsapp"></use></svg></a>
+            <a href="#" target="_blank"><svg class="header__ico"><use xlink:href="#telegram"></use></svg></a>
+            <div class="header__call-back">
+                <a class="header__phone" href="tel:+78008007777">+7 (800) 800-77-77</a>
+                <a class="header__cta" href="#">Заказать звонок</a>
+            </div><!--/.header__call-back-->
+              <!--burger_menu-->
+              <button class="burger" type="button" id="navToggle">
+                  <span class="burger__item">Menu</span>
+              </button>
+              <!--burger_menu-->
+        </div><!--/.header__contact-->
+    </div><!--/.container-->
+    </div>
+
+  <div class="hero-offer">
+      <div class="container">
+      <div class="offer">
+      <h1 class="offer__title">Приобретайте авто в лизинг <br>сроком до 60 месяцев</h1>
+      <ul clas="offer__list">
+        <li class="offer__item">
+            <svg class="offer__ico"><use xlink:href="#support"></use></svg>
+            <p class="offer__text">Техническая поддержка на дорогах</p>
+        </li>
+        <li class="offer__item">
+           <svg class="offer__ico"><use xlink:href="#future"></use></svg>
+            <p class="offer__text">Принятие решения до 60 часов</p>
+        </li>
+        <li class="offer__item">
+            <svg class="offer__ico"><use xlink:href="#income"></use></svg>
+            <p class="offer__text">Авансовый платеж до 0%</p>
+        </li>
+      </ul>
+      <div class="offer__btn">
+          <a href="#" class="cta">Рассчитать <span class="flare"></span></a>
+      </div>
+      </div><!--/.offer-->
+    </div><!--/.container-->
+  </div><!--/.hero-offer-->
+</header>
+<!--/.header-->
+<!--/.block_1-->
+
+<!--block_2-->
+<div class="work">
+	<div class="container">
+		<div class="work__header">Как работает лизинг</div>
+		<div class="process-wrapper">
+			<div class="our__service-1">
+				<div class="work__text">Заключаем договор <br> автотранспортного средства</div>
+				<div class="work__text">Пользуетесь <br> автотранспортным <br> средством</div>
+			</div>
+			<div class="progress-bar-container">
+				<ul>
+					<li class="step">1</li>
+					<li class="step">2</li>
+					<li class="step">3</li>
+					<li class="step">4</li>
+					<li class="step">5</li>
+				</ul>
+				<div class="line-progress">
+					<div class="photo-timeline"><img class="image-car" src="img/car.png" alt="car:image"></div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="our__service-2">
+				<div class="work__text">Оставляете заявку <br> и мы с вами связываемся</div>
+				<div class="work__text">Выкупаем автомобиль <br> и передаем его вам</div>
+				<div class="work__text">Вносите <br> выкупной платеж</div>
+			</div>
+			<a href="#"><button class="button__service">Оставить заявку</button></a>
+		</div>
+	</div>
+</div>
+<!--/.block_2-->
+
+<!--block_3-->
+<section id="calculator" class="calculator">
+    <div class="container">
+        <h2 class="main__title">Рассчитать стоимость лизинга</h2>
+        <div class="calculator__inner">
+        <div class="calculator__transport">
+            <div class="calculator__item" data-type="1">
+                <svg class="car"><use xlink:href="#car"></use></svg>
+                <p>Легковой <br> автомобиль</p>
+            </div>
+            <div class="calculator__item" data-type="2">
+                <svg class="commercial"><use xlink:href="#commercial"></use></svg>
+                <p>Коммерческий <br> транспорт</p>
+            </div>
+            <div class="calculator__item" data-type="3">
+                <svg class="cargo"><use xlink:href="#cargo"></use></svg>
+                <p>Грузовой <br> транспорт</p>
+            </div>
+            <div class="calculator__item" data-type="4">
+                <svg class="special-equipment"><use xlink:href="#special-equipment"></use></svg>
+                <p>Спецтехника</p>
+            </div>
+            <div class="calculator__item" data-type="5">
+                <svg class="water-transport"><use xlink:href="#water-transport"></use></svg>
+                <p>Водный <br> транспорт</p>
+            </div>
+            <div class="calculator__item" data-type="6">
+                <svg class="plane"><use xlink:href="#plane"></use></svg>
+                <p>Воздушный <br> транспорт</p>
+            </div>
+            <div class="calculator__item" data-type="7">
+                <svg class="train"><use xlink:href="#train"></use></svg>
+                <p>Подвижной <br> состав</p>
+            </div>
+            <div class="calculator__item" data-type="8">
+                <svg class="printer"><use xlink:href="#printer"></use></svg>
+                <p>Оборудование</p>
+            </div>
+
+        </div><!--/.calculator__transport-->
+        <div class="calculator__list">
+            <select class="select__calc" name="select">
+                <option value="value1">Марка</option>
+                <option value="value2">Значение 2</option>
+                <option value="value3">Значение 3</option>
+              </select>
+        </div>
+    </div><!--/.claculator__inner-->
+
+        <div class="calculator__wrapper">
+  <div class="calculator__form">
+      <form id="form">
+          <input id="form__calc" type="hidden" name="calc-type" value="2">
+          <input id="form__calc" type="hidden" name="equal" value="1">
+          <div class="fields">
+              <div class="field__carprice">
+                  <div class="bottom">
+                      <div class="left">
+                          <input type="text" name="carprice" value="Стоимость имущества">
+                      </div>
+                      <input id="money" type="range" min="200000" max="50000000" step="1000" value="3000">
+                  </div>
+                  <div class="form__text">
+                   <p>200 000 Р</p>
+                   <p>50 000 000 Р</p>
+                </div>
+              </div>
+
+              <div class="field__deposit">
+                  <div class="bottom">
+                      <div class="left">
+                          <input type="text" name="deposit" value="Первоначальный взнос">
+                      </div>
+                      <input id="money" type="range" min="200000" max="50000000" step="1000" value="3000">
+                      <div class="form__text">
+                        <p>0%</p>
+                        <p>50%</p>
+                     </div>
+                  </div>
+
+              </div>
+              <div class="field time">
+
+                  <div class="contract__term">
+                      <div class="left">
+                          <input type="text" name="time" value="Срок договора">
+                      </div>
+                      <input id="money" type="range" min="200000" max="50000000" step="1000" value="3000">
+                      <div class="form__text">
+                        <p>12 месяцев</p>
+                        <p>60 месяцев</p>
+                     </div>
+                  </div>
+
+              </div>
+          </div>
+      </form>
+  </div>
+                  <div class="calculator__submit">
+          <div class="results">
+              <div class="results__item">
+                <p class="results__text">Стоимость договора лизинга</p>
+                    <div class="results__info">
+                        <p>Ежемесячный платёж</p>
+							<hr class="results__line">
+                    </div>
+              </div>
+                <div class="results__item">
+                  <div class="results__description"><p class="results__text ">Общая сумма затрат<br> с учетом выгоды по налогам</p></div>
+                  <div class="results__list">
+                     <p class="results__text results__text--list">— возмещение НДС</p>
+                     <p class="results__text results__text--list">— экономия по налогу на прибыль</p>
+                  </div>
+              </div>
+          </div>
+          <div class="results__button">
+                <a class="btn__results" href="#">Отправить</a>
+          </div>
+      </div>
+    </div><!--/.calculator__wrapper-->
+    </div><!--/.container-->
+    
+    <div class="form">
+        <div class="container">
+        <div class="form__wrapper">
+            <div class="form__line">
+            <div class="form__inner">
+                <div class="form__content">
+            <h3 class="form__title">Заполните короткую форму</h3>
+            <p class="form__subtitle">и мы вышлем вам полный график ежемесяцных платежей</p>
+        <form class="form__feedback" action="/">
+            <input class="input__form__cta" type="text" name="name" placeholder="Ваше имя" required>
+            <input class="input__form__cta" type="tel" name="phone" placeholder="Ваш телефон" required>
+            <a class="cta sub__form" href="#">Получить график</a>
+        </form>
+    </div><!--/.form__content-->
+    </div><!--/.form__line-->
+    </div><!--/.form__inner-->
+    
+        </div><!--/.form-->
+    </div><!--/.container-->
+    
+    </div><!--/.form__wrapper-->
+</section>
+<!--/.block_3-->
+
+
+
+<!--block_4-->
+<div class="our__privilege">
+	<div class="container">
+		<div class="privilege__inner">
+			<div class="privilege__header">Мы работаем с более 150 банками</div>
+			<div class="privilege__subtitle">В том числе с крупными банками партнерами</div>
+		</div>
+		<div class="privilege__group-item">
+			<div class="privilege__item">
+				<a href="#"><img class="logo-company" src="img/carcade.png" alt="carcade:icon"></a>
+			</div>
+			<div class="privilege__item">
+				<a href="#"><img class="logo-company" src="img/sber.png" alt="sber:icon"></a>
+			</div>
+			<div class="privilege__item">
+				<a href="#"><img class="logo-company" src="img/reco.png" alt="reco:icon"></a>
+			</div>
+			<div class="privilege__item">
+				<a href="#"><img class="logo-company" src="img/europlan.png" alt="europlan:icon"></a>
+			</div>
+			<div class="privilege__item">
+				<a href="#"><img class="logo-company" src="img/alfa.png" alt="alga:icon"></a>
+			</div>
+			<div class="privilege__item">
+				<a href="#"><img class="logo-company" src="img/vtb.png" alt="vtb:icon"></a>
+			</div>
+		</div>
+		<div class="privilege__inner">
+			<div class="privilege__header">У вас остались вопросы?</div>
+			<div class="privilege__subtitle">Мы постарались ответить на самые волнующие</div>
+		</div>
+		<div class="accordeon-bg">
+			<div class="privilege__accordeon">
+				<button class="accordion">Какие требования к лизингополучателю?</button>
+				<div class="panel">
+					<p class="panel-text">Ответ на Вопрос 1...</p>
+				</div>
+
+				<button class="accordion">В каких городах можно взять транспортное средство в лизинг?</button>
+				<div class="panel">
+					<p class="panel-text">Ответ на Вопрос 2...</p>
+				</div>
+
+				<button class="accordion">Кто регистрирует транспортное средств в ГИБДД? </button>
+				<div class="panel">
+					<p class="panel-text">Ответ на Вопрос 3 ...</p>
+				</div>
+
+				<button class="accordion">Вопрос 4</button>
+				<div class="panel">
+					<p class="panel-text">Ответ на Вопрос 4 ...</p>
+				</div>
+
+				<button class="accordion">Вопрос 5</button>
+				<div class="panel">
+					<p class="panel-text">Ответ на Вопрос 5 ...</p>
+				</div>
+
+				<button class="accordion">Вопрос 6</button>
+				<div class="panel">
+					<p class="panel-text">Ответ на Вопрос 6 ...</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!--/.block_4-->
+
+<script src="js/main.js"></script>
+</body>
+
+</html>
