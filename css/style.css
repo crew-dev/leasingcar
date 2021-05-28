@@ -482,6 +482,7 @@ li.step {
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .calculator__inner {
