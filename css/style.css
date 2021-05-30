@@ -320,11 +320,10 @@ ul {
 	background-image: url(../img/bg/gray__bg.png);
 	background-size: cover;
 	background-repeat: repeat;
-	height: 1000px;
 }
 
 .work__header {
-	padding-top: 47px;
+	padding-top: 101px;
 	text-align: center;
 	color: #000;
 	font-family: "Russo One";
@@ -539,7 +538,7 @@ li.step {
 	flex-direction: column;
 }
 
-input{
+input {
 	width: 100%;
 	font-size: 16px;
 	padding: 6px 0 4px 10px;
@@ -573,6 +572,73 @@ input:hover {
 	font-size: 16px;
 	color: #fff;
 }
+
+/* advantages */
+#advantages {
+	background-color: rgba(255, 255, 255, 0.3);
+	background-image: url("../img/bg/gray__bg.png");
+	background-size: cover;
+	background-repeat: repeat;
+}
+
+.advantages__wrapper {
+	background-image: url("../img/bg");
+	background-repeat: no-repeat;
+	background-position: 50% 100%;
+	z-index: 50;
+	height: 681px;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.advantages__title {
+	display: block;
+	font-family: 'Montserrat';
+	font-weight: normal;
+	font-size: 24px;
+	color: #000;
+	text-align: center;
+}
+
+.advantages__title--el1 {
+	position: absolute;
+	top: 25%;
+	left: 10%;
+}
+
+.advantages__title--el2 {
+	position: absolute;
+	top: 50%;
+	left: 5%;
+}
+
+.advantages__title--el3 {
+	position: absolute;
+	bottom: 10%;
+	left: 10%;
+}
+
+.advantages__title--el4 {
+	position: absolute;
+	top: 25%;
+	right: 10%;
+}
+
+.advantages__title--el5 {
+	position: absolute;
+	bottom: 10%;
+	top: 50%;
+	right: 5%;
+}
+
+.advantages__title--el6 {
+	position: absolute;
+	bottom: 10%;
+	right: 10%;
+}
+
+/* /.advantages */
 
 /* ico */
 .car {
