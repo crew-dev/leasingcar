@@ -1,54 +1,122 @@
+function testWebP(callback) {
+
+    var webP = new Image();
+    webP.onload = webP.onerror = function () {
+    callback(webP.height == 2);
+    };
+    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+    }
+    
+    testWebP(function (support) {
+    
+    if (support == true) {
+    document.querySelector('body').classList.add('webp');
+    }else{
+    document.querySelector('body').classList.add('no-webp');
+    }
+});
+
+/* === меню === */ 
+let menuBurger = document.querySelector('.menu__burger'),
+    menuClose = document.querySelector('.menu__close');
+
+function menuClick() {
+    menuBurger.classList.toggle("active");
+    menuClose.classList.toggle("active");
+}
+
+menuBurger.addEventListener('click', menuClick, false);
+menuClose.addEventListener('click', menuClick, false);
+
+/* === навигация, чтобы с меню переходило по ссылкам === */
+let navLink = document.querySelectorAll('.menu__link');
+
+navLink.forEach(function(node) {
+    node.addEventListener('click', menuClick, false);
+});
+
+// var elem = $('body > header');
+// var doc = $(document);
+// function scrolled() {
+//    var threshold = doc.scrollTop() > 650;
+//    elem.toggleClass('scrolled', threshold);
+//    }
+// $(window).on({ scroll: scrolled });;
+let btnForm = document.querySelectorAll('.form__button, .popup__close'),
+    openForm = document.querySelector('.popup');
+
+let handleClick = function() {
+    openForm && openForm.classList.toggle('active')
+};
+
+btnForm.forEach(function(node) {
+    node.addEventListener('click', handleClick, false)
+});
+;
+window.addEventListener("DOMContentLoaded", function() {
+    [].forEach.call( document.querySelectorAll('.tel'), function(input) {
+    var keyCode;
+    function mask(event) {
+        event.keyCode && (keyCode = event.keyCode);
+        var pos = this.selectionStart;
+        if (pos < 3) event.preventDefault();
+        var matrix = "+7 (___) ___ ____",
+            i = 0,
+            def = matrix.replace(/\D/g, ""),
+            val = this.value.replace(/\D/g, ""),
+            new_value = matrix.replace(/[_\d]/g, function(a) {
+                return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+            });
+        i = new_value.indexOf("_");
+        if (i != -1) {
+            i < 5 && (i = 3);
+            new_value = new_value.slice(0, i)
+        }
+        var reg = matrix.substr(0, this.value.length).replace(/_+/g,
+            function(a) {
+                return "\\d{1," + a.length + "}"
+            }).replace(/[+()]/g, "\\$&");
+        reg = new RegExp("^" + reg + "$");
+        if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+        if (event.type == "blur" && this.value.length < 5)  this.value = ""
+    }
+
+    input.addEventListener("input", mask, false);
+    input.addEventListener("focus", mask, false);
+    input.addEventListener("blur", mask, false);
+    input.addEventListener("keydown", mask, false)
+
+  });
+
+});;
+
+/* fixed menu */
+var elem = $('body > header');
+var doc = $(document);
+function scrolled() {
+   var threshold = doc.scrollTop() > 100;
+   elem.toggleClass('scrolled', threshold);
+   }
+$(window).on({ scroll: scrolled });
+
+
+
 var acc = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
-}
-
-var phoneInput = document.querySelector("#phone");
-phoneInput.addEventListener("keydown", function (event) {
-  if (
-    !(
-      event.key == "ArrowLeft" ||
-      event.key == "ArrowRight" ||
-      event.key == "Backspace" ||
-      event.key == "Tab"
-    )
-  ) {
-    event.preventDefault();
-  }
-  var mask = "+7 (111) 111-11-11"; // Задаем маску
-  if (/[0-9\+\ \-\(\)]/.test(event.key)) {
-    // Здесь начинаем сравнивать this.value и mask
-    // к примеру опять же
-    var currentString = this.value;
-    var currentLength = currentString.length;
-    if (/[0-9]/.test(event.key)) {
-      if (mask[currentLength] == "1") {
-        this.value = currentString + event.key;
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
       } else {
-        for (var i = currentLength; i < mask.length; i++) {
-          if (mask[i] == "1") {
-            this.value = currentString + event.key;
-            break;
-          }
-          currentString += mask[i];
-        }
+        panel.style.maxHeight = panel.scrollHeight + "px";
       }
-    }
+    });
   }
-});
 
 const cta = document.querySelector(".welcome__button");
-
 const scrollTo = (element) => {
   window.scroll({
     left: 0,
@@ -56,8 +124,8 @@ const scrollTo = (element) => {
     behavior: "smooth",
   });
 };
-const calculator = document.querySelector("#calculator");
 
+const calculator = document.querySelector("#calculator");
 cta.addEventListener("click", (event) => {
   event.preventDefault();
   scrollTo(calculator);

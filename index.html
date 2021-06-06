@@ -2,23 +2,641 @@
 <html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="тут описание страницы">
-	<link rel="stylesheet" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-	<title>Название</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="тут описание страницы" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+	<title>Автотранспорт в лизинг для физ и юр лиц | Welcome Leasing</title>
 </head>
 
 <body>
+	<header class="header" id="header11">
+		<div class="container">
+			<div class="header__content">
+				<div class="header__logo logo">
+					<a href="#welcome">
+						<svg class="logo__icon">
+							<use xlink:href="#logo"></use>
+						</svg>
+					</a>
+					<div class="logo__descript">
+						Автомобиль в лизинг
+						<br />для физических и юридических лиц
+					</div>
+				</div>
+
+				<div class="header__contacts contacts">
+					<div class="contacts__social social">
+						<a href="#" class="social__link">
+							<svg class="social__icon">
+								<use xlink:href="#whatsapp"></use>
+							</svg>
+						</a>
+						<a href="#" class="social__link">
+							<svg class="social__icon">
+								<use xlink:href="#telegram"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="contacts__connect">
+						<a href="tel:+78008007777" class="contacts__tel">8 (800) 800-77-77</a>
+						<a href="#" class="contacts__btn form__button">Заказать звонок</a>
+					</div>
+
+					<div class="header__menu menu">
+						<button class="menu__burger _reset">
+							<svg class="menu__icon">
+								<use xlink:href="#menu"></use>
+							</svg>
+						</button>
+
+						<div class="menu__content">
+							<div class="menu__block">
+								<div class="menu__close">
+									<svg class="menu__icon">
+										<use xlink:href="#close"></use>
+									</svg>
+								</div>
+								<div class="menu__info">
+									<div class="menu__logo logo">
+										<a href="#welcome" class="menu__link">
+											<svg class="logo__icon">
+												<use xlink:href="#logo"></use>
+											</svg>
+										</a>
+									</div>
+									<nav class="menu__nav">
+										<a href="#welcome" class="menu__link">Главная</a>
+										<a href="#welcome" class="menu__link">Как работает лизинг</a>
+										<a href="#advantages" class="menu__link">Преимущества лизинга</a>
+										<a href="#welcome" class="menu__link">Рассчитать стоимость</a>
+										<a href="#welcome" class="menu__link">Наши партнеры</a>
+										<a href="#welcome" class="menu__link">Часто задаваемые вопросы</a>
+									</nav>
+									<div class="menu__social social">
+										<a href="#" class="social__link">
+											<svg class="social__icon">
+												<use xlink:href="#whatsapp"></use>
+											</svg>
+										</a>
+										<a href="#" class="social__link">
+											<svg class="social__icon">
+												<use xlink:href="#telegram"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="section welcome" id="welcome">
+		<div class="container">
+			<div class="welcome__content">
+				<h1 class="welcome__title title">
+					Приобретайте авто в лизинг сроком до 60 месяцев
+				</h1>
+				<ul class="welcome__list">
+					<li class="welcome__item">
+						<svg class="welcome__icon">
+							<use xlink:href="#support"></use>
+						</svg>
+						<div class="welcome__text">Техническая поддержка на дорогах</div>
+					</li>
+					<li class="welcome__item">
+						<svg class="welcome__icon">
+							<use xlink:href="#future"></use>
+						</svg>
+						<div class="welcome__text">Принятие решение до 60 часов</div>
+					</li>
+					<li class="welcome__item">
+						<svg class="welcome__icon">
+							<use xlink:href="#income"></use>
+						</svg>
+						<div class="welcome__text">Авансовый платеж от 0%</div>
+					</li>
+				</ul>
+				<a href="#" class="cta welcome__button"><span class="cta__span">Рассчитать</span><span class="flare"></span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="section stages">
+		<div class="container">
+			<div class="stages__content">
+				<h2 class="section__title">Как работает лизинг</h2>
+				<div class="process-wrapper">
+					<div class="our__service-1">
+						<div class="work__text">
+							Заключаем договор <br />
+							автотранспортного средства
+						</div>
+						<div class="work__text">
+							Пользуетесь <br />
+							автотранспортным <br />
+							средством
+						</div>
+					</div>
+					<div class="progress-bar-container">
+						<ul>
+							<li class="step">1</li>
+							<li class="step">2</li>
+							<li class="step">3</li>
+							<li class="step">4</li>
+							<li class="step">5</li>
+						</ul>
+						<div class="line-progress">
+							<div class="photo-timeline">
+								<picture>
+									<source srcset="img/png/car.webp" type="image/webp" />
+									<img class="image-car" src="img/png/car.png" alt="car:image" /></picture>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="our__service-2">
+						<div class="work__text">
+							Оставляете заявку <br />
+							и мы с вами связываемся
+						</div>
+						<div class="work__text">
+							Выкупаем автомобиль <br />
+							и передаем его вам
+						</div>
+						<div class="work__text">
+							Вносите <br />
+							выкупной платеж
+						</div>
+					</div>
+					<button class="button__service form__button">
+						Оставить заявку
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section stages__mobile">
+		<div class="container">
+			<div class="stages__mobile__wrap">
+				<h2 class="section__title">Как работает лизинг</h2>
+				<div class="stages__inner">
+					<div class="stages__content">
+						<div class="stages__item">
+							<span>Шаг №1</span>
+							<p>Оставляете заявку и мы с вами связываемся</p>
+						</div>
+					</div>
+					<div class="stages__content">
+						<div class="stages__item">
+							<span>Шаг №2</span>
+							<p>Заключаем договор автотранспортного средства</p>
+						</div>
+					</div>
+					<div class="stages__content">
+						<div class="stages__item">
+							<span>Шаг №3</span>
+							<p>Выкупаем автомобиль и передаем его вам</p>
+						</div>
+					</div>
+					<div class="stages__content">
+						<div class="stages__item">
+							<span>Шаг №4</span>
+							<p>Пользуетесь автотранспортным средством</p>
+						</div>
+					</div>
+					<div class="stages__content">
+						<div class="stages__item">
+							<span>Шаг №5</span>
+							<p>Вносите выкупной платеж</p>
+						</div>
+					</div>
+				</div>
+				<!--/.stages__inner-->
+				<button class="button__service form__button">
+					Оставить заявку
+				</button>
+			</div>
+			<!--/.stages__mobile__wrap-->
+		</div>
+		<!--/.container-->
+	</section>
+
+	<section class="section advantages">
+		<div class="container">
+			<div class="advantages__content">
+				<h2 class="section__title advantages__title" id="advantages">
+					Преимущества лизинга
+				</h2>
+				<div class="advantages__info">
+					<picture>
+						<source srcset="img/png/advantages.webp" type="image/webp" />
+						<img src="img/png/advantages.png" alt="договор лизинга" class="advantages__image" /></picture>
+					<span class="advantages__pulse"></span>
+					<div class="advantages__list">
+						<h3 class="advantages__item advantages__item-01">
+							Экономия на налогах до 40%
+						</h3>
+						<h3 class="advantages__item advantages__item-02">
+							Экономия за счёт возврата НДС
+						</h3>
+						<h3 class="advantages__item advantages__item-03">
+							Срок до 60 месяцев
+						</h3>
+					</div>
+					<div class="advantages__list">
+						<h3 class="advantages__item advantages__item-04">
+							Отсутствие залога
+						</h3>
+						<h3 class="advantages__item advantages__item-05">
+							Индивидуальный график платежей
+						</h3>
+						<h3 class="advantages__item advantages__item-06">
+							Субсидия до 15%
+						</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="calculator" class="calculator">
+		<div class="container">
+			<h2 class="main__title">Рассчитать стоимость лизинга</h2>
+			<div class="calculator__inner">
+				<div class="calculator__transport">
+					<div class="calculator__item" data-type="1">
+						<svg class="calculator__ico">
+							<use xlink:href="#car"></use>
+						</svg>
+						<p>
+							Легковой <br />
+							автомобиль
+						</p>
+					</div>
+					<div class="calculator__item" data-type="2">
+						<svg class="calculator__ico">
+							<use xlink:href="#commercial"></use>
+						</svg>
+						<p>
+							Коммерческий <br />
+							транспорт
+						</p>
+					</div>
+					<div class="calculator__item" data-type="3">
+						<svg class="calculator__ico">
+							<use xlink:href="#cargo"></use>
+						</svg>
+						<p>
+							Грузовой <br />
+							транспорт
+						</p>
+					</div>
+					<div class="calculator__item" data-type="4">
+						<svg class="calculator__ico">
+							<use xlink:href="#special-equipment"></use>
+						</svg>
+						<p>Спецтехника</p>
+					</div>
+					<div class="calculator__item" data-type="5">
+						<svg class="calculator__ico">
+							<use xlink:href="#water-transport"></use>
+						</svg>
+						<p>
+							Водный <br />
+							транспорт
+						</p>
+					</div>
+					<div class="calculator__item" data-type="6">
+						<svg class="calculator__ico">
+							<use xlink:href="#plane"></use>
+						</svg>
+						<p>
+							Воздушный <br />
+							транспорт
+						</p>
+					</div>
+					<div class="calculator__item" data-type="7">
+						<svg class="calculator__ico">
+							<use xlink:href="#train"></use>
+						</svg>
+						<p>
+							Подвижной <br />
+							состав
+						</p>
+					</div>
+					<div class="calculator__item" data-type="8">
+						<svg class="calculator__ico">
+							<use xlink:href="#printer"></use>
+						</svg>
+						<p>Оборудование</p>
+					</div>
+				</div>
+				<!--/.calculator__transport-->
+			</div>
+			<!--/.claculator__inner-->
+
+			<div class="calculator__wrapper">
+				<div class="calculator__form">
+					<form id="form">
+						<input id="form__calc" type="hidden" name="calc-type" value="2" />
+						<input id="form__calc" type="hidden" name="equal" value="1" />
+						<div class="fields">
+							<div class="field__carprice">
+								<div class="bottom">
+									<div class="left">
+										<input readonly type="text" class="left__input" id="carprice" name="carprice" value="200000 P" />
+										<span class="left__title">Стоимость имущества</span>
+									</div>
+									<input id="money" type="range" min="200000" max="50000000" step="1000" value="3000" />
+								</div>
+								<div class="form__text">
+									<p>200 000 Р</p>
+									<p>50 000 000 Р</p>
+								</div>
+							</div>
+
+							<div class="field__deposit">
+								<div class="bottom">
+									<div class="left">
+										<input readonly id="first_installment" type="text" class="left__input" name="deposit"
+											value="0%" /><span class="left__title">Первоначальный взнос</span>
+									</div>
+									<input id="installment" type="range" min="0" max="50" step="1" value="0" />
+									<div class="form__text">
+										<p>0%</p>
+										<p>50%</p>
+									</div>
+								</div>
+							</div>
+							<div class="field time">
+								<div class="contract__term">
+									<div class="left">
+										<input readonly id="outcome_term_contract" type="text" class="left__input" name="time"
+											value="12 месяцев" />
+										<span class="left__title">Срок договора</span>
+									</div>
+									<input id="term_contract_input" type="range" min="12" max="60" step="1" value="12" />
+									<div class="form__text">
+										<p>12 месяцев</p>
+										<p>60 месяцев</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="calculator__submit">
+					<div class="results">
+						<div class="results__item">
+							<h3 class="results__text">Стоимость договора лизинга</h3>
+							<div class="results__info">
+								<p>Ежемесячный платёж</p>
+								<hr class="results__line" />
+							</div>
+						</div>
+						<div class="results__item">
+							<div class="results__description">
+								<span class="results__text">
+									Общая сумма затрат<br />
+									с учетом выгоды по налогам
+								</span>
+							</div>
+							<div class="results__list">
+								<span class="results__text results__text--list">
+									— возмещение НДС
+								</span>
+								<span class="results__text results__text--list">
+									— экономия по налогу на прибыль
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="results__button">
+						<button class="cta btn__results"><span class="cta__span">Отправить</span></button>
+					</div>
+				</div>
+			</div>
+			<!--/.calculator__wrapper-->
+		</div>
+		<!--/.container-->
+		<div class="form">
+			<div class="container">
+				<div class="form__wrapper">
+					<div class="form__line">
+						<div class="form__inner">
+							<div class="form__content">
+								<h3 class="form__title">Заполните короткую форму</h3>
+								<span class="form__subtitle">и мы вышлем вам полный график ежемесяцных платежей</span>
+								<form class="form__feedback" action="/">
+									<div class="input-inner">
+										<input class="input__form" type="name" placeholder="Введите имя" />
+										<span class="focus-border">
+											<i></i>
+										</span>
+									</div>
+									<div class="input-inner">
+										<input class="input__form tel" type="text" name="tel" placeholder="Ваш номер телефона" />
+										<span class="focus-border">
+											<i></i>
+										</span>
+									</div>
+									<div class="form-content">
+										<a href="#"><button class="cta sub__form"><span class="cta__span">Получить график</span></button></a>
+										<span class="form-subtitle">Нажимая на кнопку, вы принимаете
+											<a href="#" class="popup__link">условия передачи данных</a>
+									</div>
+								</form>
+							</div>
+							<!--/.form__content-->
+						</div>
+						<!--/.form__line-->
+					</div>
+					<!--/.form__inner-->
+				</div>
+				<!--/.form-->
+			</div>
+			<!--/.container-->
+		</div>
+	</section>
+
+	<section class="section partners">
+		<div class="container">
+			<div class="partners__content">
+				<h2 class="section__title partners__title">
+					Мы работаем с более 150 банками
+				</h2>
+				<h3 class="section__subtitle partners__subtitle">
+					В том числе с крупными банками партнерами
+				</h3>
+				<div class="partners__list">
+					<picture>
+						<source srcset="img/png/carcade.webp" type="image/webp" />
+						<img src="img/png/carcade.png" alt="" class="partners__item" /></picture>
+					<picture>
+						<source srcset="img/png/sber.webp" type="image/webp" />
+						<img src="img/png/sber.png" alt="" class="partners__item" /></picture>
+					<picture>
+						<source srcset="img/png/reco.webp" type="image/webp" />
+						<img src="img/png/reco.png" alt="" class="partners__item" /></picture>
+					<picture>
+						<source srcset="img/png/europlan.webp" type="image/webp" />
+						<img src="img/png/europlan.png" alt="" class="partners__item" /></picture>
+					<picture>
+						<source srcset="img/png/alfa.webp" type="image/webp" />
+						<img src="img/png/alfa.png" alt="" class="partners__item" /></picture>
+					<picture>
+						<source srcset="img/png/vtb.webp" type="image/webp" />
+						<img src="img/png/vtb.png" alt="" class="partners__item" /></picture>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section qa">
+		<div class="container">
+			<div class="qa__content">
+				<h2 class="section__title qa__title">У вас остались вопросы?</h2>
+				<h3 class="section__subtitle qa__subtitle">
+					Мы постарались ответить на самые волнующие
+				</h3>
+
+				<div class="qa__wrapper"></div>
+				<div class="accordeon-bg">
+					<div class="privilege__accordeon">
+						<button class="accordion">
+							Какие требования к лизингополучателю?
+						</button>
+						<div class="panel">
+							<p class="panel-text">Ответ на Вопрос 1...</p>
+						</div>
+
+						<button class="accordion">
+							В каких городах можно взять транспортное средство в лизинг?
+						</button>
+						<div class="panel">
+							<p class="panel-text">Ответ на Вопрос 2...</p>
+						</div>
+
+						<button class="accordion">
+							Кто регистрирует транспортное средств в ГИБДД?
+						</button>
+						<div class="panel">
+							<p class="panel-text">Ответ на Вопрос 3 ...</p>
+						</div>
+
+						<button class="accordion">Вопрос 4</button>
+						<div class="panel">
+							<p class="panel-text">Ответ на Вопрос 4 ...</p>
+						</div>
+
+						<button class="accordion">Вопрос 5</button>
+						<div class="panel">
+							<p class="panel-text">Ответ на Вопрос 5 ...</p>
+						</div>
+
+						<button class="accordion">Вопрос 6</button>
+						<div class="panel">
+							<p class="panel-text">Ответ на Вопрос 6 ...</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer id="footer" class="footer">
+		<div class="container">
+			<div class="footer__content">
+				<div class="header__logo">
+					<a href="#">
+						<svg class="logo__icon">
+						<use xlink:href="#logo"></use>
+					</svg>
+					</a>
+				</div>
+				<div class="footer__copyright">
+					<span class="footer__policy">Политика конфиденциальности</span>
+					<span>© Все права защищены</span>
+				</div>
+				<div class="header__contacts contacts">
+					<div class="header__contacts contacts">
+						<div class="contacts__social social">
+							<a href="#" class="social__link">
+								<svg class="social__icon">
+									<use xlink:href="#whatsapp"></use>
+								</svg>
+							</a>
+							<a href="#" class="social__link">
+								<svg class="social__icon">
+									<use xlink:href="#telegram"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="contacts__connect">
+							<a href="tel:+78008007777" class="contacts__tel">8 (800) 800-77-77</a>
+							<a href="#" class="contacts__btn">Заказать звонок</a>
+						</div>
+					</div>
+					<!--/.header__call-back-->
+				</div>
+				<!--/.header__contact-->
+			</div>
+			<!--/.footer__content-->
+		</div>
+		<!--/.container-->
+	</footer>
+
+	<div class="popup">
+		<form action="#" method="POST" class="popup__form">
+			<div class="popup__frame">
+				<div class="popup__close">
+					<svg class="popup__icon">
+						<use xlink:href="#close"></use>
+					</svg>
+				</div>
+				<h2 class="popup__title">
+					Заполните короткую <br />
+					форму, <span>и наш менеджер свяжется с вами</span>
+				</h2>
+				<div class="popup__fill">
+					<div class="input-inner">
+						<input class="input__form" type="name" placeholder="Введите имя" />
+						<span class="focus-border">
+							<i></i>
+						</span>
+					</div>
+					<div class="input-inner">
+						<input class="input__form tel" type="text" name="tel" placeholder="Ваш номер телефона" />
+						<span class="focus-border">
+							<i></i>
+						</span>
+					</div>
+				</div>
+				<button class="popup__button"><span class="cta__span">Отправить заявку</span></button>
+				<div class="popup__politic">Нажимая на кнопку, вы принимаете
+					<a href="#" class="popup__link">условия передачи данных</a>
+				</div>
+			</div>
+		</form>
+	</div>
+
 	<!-- icon -->
-	<svg style="display: none;">
+	<svg style="display: none">
 		<!-- логотип -->
 		<symbol id="logo" viewBox="0 0 200 200">
 			<style>
 				.st0 {
-					display: none
+					display: none;
 				}
 			</style>
 			<path d="M122.9 96.3c-2.9-6.1-7.1-8.8-13.5-8.7-7.8.1-13.5 5.3-16.8 
@@ -70,7 +688,6 @@
 			<path fill-rule="evenodd" clip-rule="evenodd"
 				d="M18.403,5.633C16.708,3.936,14.454,3.001,12.053,3	c-4.948,0-8.976,4.027-8.978,8.977c0,1.582,0.413,3.126,1.198,4.488L3,21.116l4.759-1.249c1.312,0.715,2.788,1.092,4.29,1.093h0.004	l0,0c4.947,0,8.975-4.027,8.977-8.977C21.03,9.585,20.098,7.33,18.403,5.633 M12.053,19.445H12.05	c-1.339-0.001-2.652-0.36-3.798-1.041l-0.272-0.162l-2.824,0.741l0.753-2.753l-0.177-0.282c-0.747-1.188-1.141-2.561-1.141-3.971	c0.002-4.114,3.349-7.461,7.465-7.461c1.993,0.001,3.866,0.778,5.275,2.188c1.408,1.411,2.184,3.285,2.183,5.279	C19.512,16.097,16.165,19.445,12.053,19.445 M16.146,13.856c-0.225-0.113-1.327-0.655-1.533-0.73	c-0.205-0.075-0.354-0.112-0.504,0.112s-0.58,0.729-0.711,0.879s-0.262,0.168-0.486,0.056s-0.947-0.349-1.804-1.113	c-0.667-0.595-1.117-1.329-1.248-1.554s-0.014-0.346,0.099-0.458c0.101-0.1,0.224-0.262,0.336-0.393	c0.112-0.131,0.149-0.224,0.224-0.374s0.038-0.281-0.019-0.393c-0.056-0.113-0.505-1.217-0.692-1.666	C9.627,7.787,9.442,7.845,9.304,7.839c-0.13-0.006-0.28-0.008-0.429-0.008c-0.15,0-0.393,0.056-0.599,0.28	C8.07,8.336,7.491,8.878,7.491,9.982c0,1.104,0.804,2.171,0.916,2.321c0.112,0.15,1.582,2.415,3.832,3.387	c0.536,0.231,0.954,0.369,1.279,0.473c0.537,0.171,1.026,0.146,1.413,0.089c0.431-0.064,1.327-0.542,1.514-1.066	c0.187-0.524,0.187-0.973,0.131-1.067C16.52,14.025,16.369,13.968,16.146,13.856" />
 		</symbol>
-
 		<symbol id="telegram" viewBox="0 0 24 20">
 			<path
 				d="M20.665,3.717l-17.73,6.837c-1.21,0.486-1.203,1.161-0.222,1.462l4.552,1.42l10.532-6.645	c0.498-0.303,0.953-0.14,0.579,0.192l-8.533,7.701l0,0l0,0H9.841l0.002,0.001l-0.314,4.692c0.46,0,0.663-0.211,0.921-0.46	l2.211-2.15l4.599,3.397c0.848,0.467,1.457,0.227,1.668-0.785l3.019-14.228C22.256,3.912,21.474,3.351,20.665,3.717z" />
@@ -113,6 +730,7 @@
 			<path
 				d="m504.478 300.46c-6.79-9.43-19.93-11.56-29.35-4.77-28.58 20.59-83.46 60.13-87.82 63.28-2.01 1.71-4.12 3.26-6.32 4.63-8.63 5.43-18.64 8.33-29.09 8.33h-71.85c-8.28 0-15-6.71-15-15 0-8.3 6.73-15 15-15h76.84c11.29 0 20.33-9.4 19.86-20.71-.44-10.73-9.6-19.05-20.34-19.05h-58.49c-3.96-4.19-8.3-8.03-12.95-11.46-15.99-11.79-35.75-18.76-57.14-18.76-38.03 0-75.87 23.96-91.56 55.94l61.36 106.27h115.1c22.6 0 44.86-5.78 64.45-17.05 6.79-3.9 14.06-8.59 21.94-14.25 33.02-23.72 100.53-73 100.58-73.03 9.44-6.78 11.58-19.94 4.78-29.37z" />
 		</symbol>
+
 		<symbol id="car" viewBox="1 -172 575.96023 575">
 			<path d="M 240 86.890625 L 278.398438 86.890625 L 278.398438 106.09375 L 240 106.09375 Z M 240 86.890625 " />
 			<path
@@ -230,466 +848,7 @@
 				d="M 508.800781 384.484375 L 528 384.484375 L 528 403.683594 L 508.800781 403.683594 Z M 508.800781 384.484375 " />
 		</symbol>
 	</svg>
-	<header class="header">
-		<div class="container">
-			<div class="header__content">
-				<div class="header__logo logo">
-					<a href="#">
-						<svg class="logo__icon">
-							<use xlink:href="#logo">
-							</use>
-						</svg>
-					</a>
-					<div class="logo__descript">
-						Автомобиль в лизинг
-						<br>для физических и юридических лиц
-					</div>
-				</div>
-
-				<div class="header__contacts contacts">
-					<div class="contacts__social social">
-						<a href="#" class="social__link">
-							<svg class="social__icon">
-								<use xlink:href="#whatsapp"></use>
-							</svg>
-						</a>
-						<a href="#" class="social__link">
-							<svg class="social__icon">
-								<use xlink:href="#telegram"></use>
-							</svg>
-						</a>
-					</div>
-					<div class="contacts__connect">
-						<a href="tel:+78008007777" class="contacts__tel">8 (800) 800-77-77</a>
-						<a href="#" class="contacts__btn">Заказать звонок</a>
-					</div>
-
-					<div class="header__menu menu">
-						<button class="menu__burger _reset">
-							<svg class="menu__icon">
-								<use xlink:href="#menu"></use>
-							</svg>
-						</button>
-
-						<div class="menu__content">
-							<div class="menu__block">
-								<div class="menu__close">
-									<svg class="menu__icon">
-										<use xlink:href="#close"></use>
-									</svg>
-								</div>
-								<div class="menu__info">
-									<nav class="menu__nav">
-										<a href="#welcome" class="menu__link">Главная</a>
-									</nav>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-
-	<section class="section welcome" id="welcome">
-		<div class="container">
-			<div class="welcome__content">
-				<h1 class="welcome__title title">Приобретайте авто в лизинг
-					сроком до 60 месяцев</h1>
-				<ul class="welcome__list">
-					<li class="welcome__item">
-						<svg class="welcome__icon">
-							<use xlink:href="#support"></use>
-						</svg>
-						<div class="welcome__text">Техническая поддержка на дорогах</div>
-					</li>
-					<li class="welcome__item">
-						<svg class="welcome__icon">
-							<use xlink:href="#future"></use>
-						</svg>
-						<div class="welcome__text">Принятие решение до 60 часов</div>
-					</li>
-					<li class="welcome__item">
-						<svg class="welcome__icon">
-							<use xlink:href="#income"></use>
-						</svg>
-						<div class="welcome__text">Авансовый платеж от 0%</div>
-					</li>
-				</ul>
-				<a href="#" class="welcome__button">Рассчитать
-					<span class="flare"></span>
-				</a>
-			</div>
-		</div>
-	</section>
-	<div class="modal" style="display: none;">
-		<h2 class="form-title">Заполните <br> короткую форму</h2>
-		<p class="form-subtitle">и наш менеджер свяжется с вами <br> в течение 15 минут</p>
-		<div class="contacts-block">
-			<form action="https://formspree.io/myynabdp" method="POST" class="contacts-form">
-				<input type="text" name="name" class="input input-name" placeholder="Введите ваше имя">
-				<input type="email" name="email" class="input input-email" placeholder="Введите ваш телефон">
-				<button value="Send" class="form-button">Оставить заявку</button>
-			</form>
-		</div>
-		</form>
-	</div>
-	<!--/.block_1-->
-
-	<!--block_2-->
-	<div class="work">
-		<div class="container">
-			<h2 class="work__header">Как работает лизинг</h2>
-			<div class="process-wrapper">
-				<div class="our__service-1">
-					<div class="work__text">Заключаем договор <br> автотранспортного средства</div>
-					<div class="work__text">Пользуетесь <br> автотранспортным <br> средством</div>
-				</div>
-				<div class="progress-bar-container">
-					<ul>
-						<li class="step">1</li>
-						<li class="step">2</li>
-						<li class="step">3</li>
-						<li class="step">4</li>
-						<li class="step">5</li>
-					</ul>
-					<div class="line-progress">
-						<div class="photo-timeline"><img class="image-car" src="img/car.png" alt="car:image"></div>
-					</div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="our__service-2">
-					<div class="work__text">Оставляете заявку <br> и мы с вами связываемся</div>
-					<div class="work__text">Выкупаем автомобиль <br> и передаем его вам</div>
-					<div class="work__text">Вносите <br> выкупной платеж</div>
-				</div>
-				<a href="#"><button class="button__service">Оставить заявку</button></a>
-			</div>
-		</div>
-	</div>
-	<!--/.block_2-->
-
-	<!--Advantages-->
-	<section id="advantages" class="section">
-		<div class="container">
-			<h2 class="work__header">Преимущества лизинга</h2>
-			<div class="advantages__wrapper">
-				<div class="advantages__item">
-					<h3 class="advantages__title advantages__title--el1">Экономия <br> на налогах до 40%</h3>
-					<h3 class="advantages__title advantages__title--el2">Экономия <br> за счёт возврата НДС</h3>
-					<h3 class="advantages__title advantages__title--el3">Срок до 60 месяцев</h3>
-				</div>
-				<div class="advantages__item">
-					<h3 class="advantages__title advantages__title--el4">Отсутствие залога</h3>
-					<h3 class="advantages__title advantages__title--el5">Индивидуальный <br> график платежей</h3>
-					<h3 class="advantages__title advantages__title--el6">Субсидия до 15%</h3>
-				</div>
-				<div class="advantages__circle"></div>
-				<div class="advantages__circle-2"></div>
-			</div>
-			<!--/.advantages__wrapper-->
-		</div>
-		<!--/.container-->
-	</section>
-	<!--/.Advantages-->
-
-	<!--block_3-->
-	<section id="calculator" class="calculator">
-		<div class="container">
-			<h2 class="main__title">Рассчитать стоимость лизинга</h2>
-			<div class="calculator__inner">
-				<div class="calculator__transport">
-					<div class="calculator__item" data-type="1">
-						<svg class="calculator__ico">
-							<use xlink:href="#car"></use>
-						</svg>
-						<p>Легковой <br> автомобиль</p>
-					</div>
-					<div class="calculator__item" data-type="2">
-						<svg class="calculator__ico">
-							<use xlink:href="#commercial"></use>
-						</svg>
-						<p>Коммерческий <br> транспорт</p>
-					</div>
-					<div class="calculator__item" data-type="3">
-						<svg class="calculator__ico">
-							<use xlink:href="#cargo"></use>
-						</svg>
-						<p>Грузовой <br> транспорт</p>
-					</div>
-					<div class="calculator__item" data-type="4">
-						<svg class="calculator__ico">
-							<use xlink:href="#special-equipment"></use>
-						</svg>
-						<p>Спецтехника</p>
-					</div>
-					<div class="calculator__item" data-type="5">
-						<svg class="calculator__ico">
-							<use xlink:href="#water-transport"></use>
-						</svg>
-						<p>Водный <br> транспорт</p>
-					</div>
-					<div class="calculator__item" data-type="6">
-						<svg class="calculator__ico">
-							<use xlink:href="#plane"></use>
-						</svg>
-						<p>Воздушный <br> транспорт</p>
-					</div>
-					<div class="calculator__item" data-type="7">
-						<svg class="calculator__ico">
-							<use xlink:href="#train"></use>
-						</svg>
-						<p>Подвижной <br> состав</p>
-					</div>
-					<div class="calculator__item" data-type="8">
-						<svg class="calculator__ico">
-							<use xlink:href="#printer"></use>
-						</svg>
-						<p>Оборудование</p>
-					</div>
-
-				</div>
-				<!--/.calculator__transport-->
-				<div class="calculator__list">
-					<select class="select__calc" name="select">
-						<option value="value1">Марка</option>
-						<option value="value2">Значение 2</option>
-						<option value="value3">Значение 3</option>
-					</select>
-				</div>
-			</div>
-			<!--/.claculator__inner-->
-
-			<div class="calculator__wrapper">
-				<div class="calculator__form">
-					<form id="form">
-						<input id="form__calc" type="hidden" name="calc-type" value="2">
-						<input id="form__calc" type="hidden" name="equal" value="1">
-						<div class="fields">
-							<div class="field__carprice">
-								<div class="bottom">
-									<div class="left">
-										<input readonly type="text" class="left__input" id="carprice" name="carprice" value="200000 P">
-										<span class="left__title">Стоимость имущества</span>
-									</div>
-									<input id="money" type="range" min="200000" max="50000000" step="1000" value="3000">
-								</div>
-								<div class="form__text">
-									<p>200 000 Р</p>
-									<p>50 000 000 Р</p>
-								</div>
-							</div>
-
-							<div class="field__deposit">
-								<div class="bottom">
-									<div class="left">
-										<input readonly id="first_installment" type="text" class="left__input" name="deposit"
-											value="0%"><span class="left__title">Первоначальный взнос</span>
-									</div>
-									<input id="installment" type="range" min="0" max="50" step="1" value="0">
-									<div class="form__text">
-										<p>0%</p>
-										<p>50%</p>
-									</div>
-								</div>
-							</div>
-							<div class="field time">
-
-								<div class="contract__term">
-									<div class="left">
-										<input readonly id="outcome_term_contract" type="text" class="left__input" name="time"
-											value="12 месяцев">
-										<span class="left__title">Срок договора</span>
-									</div>
-									<input id="term_contract_input" type="range" min="12" max="60" step="1" value="12">
-									<div class="form__text">
-										<p>12 месяцев</p>
-										<p>60 месяцев</p>
-									</div>
-								</div>
-
-							</div>
-						</div>
-					</form>
-				</div>
-
-				<div class="calculator__submit">
-					<div class="results">
-						<div class="results__item">
-							<p class="results__text">Стоимость договора лизинга</p>
-							<div class="results__info">
-								<p>Ежемесячный платёж</p>
-								<hr class="results__line">
-							</div>
-						</div>
-						<div class="results__item">
-							<div class="results__description">
-								<p class="results__text ">Общая сумма затрат<br> с учетом выгоды по налогам</p>
-							</div>
-							<div class="results__list">
-								<p class="results__text results__text--list">— возмещение НДС</p>
-								<p class="results__text results__text--list">— экономия по налогу на прибыль</p>
-							</div>
-						</div>
-					</div>
-					<div class="results__button">
-						<a class="cta btn__results" href="#">Отправить</a>
-					</div>
-				</div>
-			</div>
-			<!--/.calculator__wrapper-->
-		</div>
-		<!--/.container-->
-
-		<div class="form">
-			<div class="container">
-				<div class="form__wrapper">
-					<div class="form__line">
-						<div class="form__inner">
-							<div class="form__content">
-								<h3 class="form__title">Заполните короткую форму</h3>
-								<p class="form__subtitle">и мы вышлем вам полный график ежемесяцных платежей</p>
-								<form class="form__feedback" action="/">
-									<div class="input-inner">
-										<input class="effect-input" type="name" placeholder="Введите имя">
-										<span class="focus-border">
-											<i></i>
-										</span>
-									</div>
-									<div class="input-inner">
-										<input class="effect-input" id="phone" type="tel" name="phone" placeholder="+7 (___)___-__-__" />
-										<span class="focus-border">
-											<i></i>
-										</span>
-									</div>
-									<div class="form-inner">
-										<a href="#"><button class="cta sub__form">Получить график</button></a>
-										<span class="form-subtitle">Нажимая на кнопку, вы принимаете
-											<a class="form-subtitle form-text-link" href="#"><span>условия передачи данных</span></a></span>
-									</div>
-								</form>
-							</div>
-							<!--/.form__content-->
-						</div>
-						<!--/.form__line-->
-					</div>
-					<!--/.form__inner-->
-				</div>
-				<!--/.form-->
-			</div>
-			<!--/.container-->
-		</div>
-		<!--/.form__wrapper-->
-	</section>
-	<!--/.block_3-->
-	<!--block_4-->
-	<div class="our__privilege">
-		<div class="container">
-			<div class="privilege__inner">
-				<div class="privilege__header">Мы работаем с более 150 банками</div>
-				<div class="privilege__subtitle">В том числе с крупными банками партнерами</div>
-			</div>
-			<div class="privilege__group-item">
-				<div class="privilege__item">
-					<a href="#"><img class="logo-company" src="img/carcade.png" alt="carcade:icon"></a>
-				</div>
-				<div class="privilege__item">
-					<a href="#"><img class="logo-company" src="img/sber.png" alt="sber:icon"></a>
-				</div>
-				<div class="privilege__item">
-					<a href="#"><img class="logo-company" src="img/reco.png" alt="reco:icon"></a>
-				</div>
-				<div class="privilege__item">
-					<a href="#"><img class="logo-company" src="img/europlan.png" alt="europlan:icon"></a>
-				</div>
-				<div class="privilege__item">
-					<a href="#"><img class="logo-company" src="img/alfa.png" alt="alga:icon"></a>
-				</div>
-				<div class="privilege__item">
-					<a href="#"><img class="logo-company" src="img/vtb.png" alt="vtb:icon"></a>
-				</div>
-			</div>
-			<div class="privilege__inner header-question">
-				<div class="privilege__header">У вас остались вопросы?</div>
-				<div class="privilege__subtitle">Мы постарались ответить на самые волнующие</div>
-			</div>
-			<div class="accordeon-bg">
-				<div class="privilege__accordeon">
-					<button class="accordion">Какие требования к лизингополучателю?</button>
-					<div class="panel">
-						<p class="panel-text">Ответ на Вопрос 1...</p>
-					</div>
-
-					<button class="accordion">В каких городах можно взять транспортное средство в лизинг?</button>
-					<div class="panel">
-						<p class="panel-text">Ответ на Вопрос 2...</p>
-					</div>
-
-					<button class="accordion">Кто регистрирует транспортное средств в ГИБДД? </button>
-					<div class="panel">
-						<p class="panel-text">Ответ на Вопрос 3 ...</p>
-					</div>
-
-					<button class="accordion">Вопрос 4</button>
-					<div class="panel">
-						<p class="panel-text">Ответ на Вопрос 4 ...</p>
-					</div>
-
-					<button class="accordion">Вопрос 5</button>
-					<div class="panel">
-						<p class="panel-text">Ответ на Вопрос 5 ...</p>
-					</div>
-
-					<button class="accordion">Вопрос 6</button>
-					<div class="panel">
-						<p class="panel-text">Ответ на Вопрос 6 ...</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
-
-	<footer id="footer" class="footer">
-		<div class="container">
-			<div class="footer__content">
-				<div class="header__logo">
-					<svg class="logo__icon">
-						<use xlink:href="#logo"></use>
-					</svg>
-				</div>
-				<div class="footer__copyright">
-					<span class="footer__policy">Политика конфиденциальности</span>
-					<p>© Все права защищены</p>
-				</div>
-				<div class="header__contacts contacts">
-					<div class="header__contacts contacts">
-						<div class="contacts__social social">
-							<a href="#" class="social__link">
-								<svg class="social__icon">
-									<use xlink:href="#whatsapp"></use>
-								</svg>
-							</a>
-							<a href="#" class="social__link">
-								<svg class="social__icon">
-									<use xlink:href="#telegram"></use>
-								</svg>
-							</a>
-						</div>
-						<div class="contacts__connect">
-							<a href="tel:+78008007777" class="contacts__tel">8 (800) 800-77-77</a>
-							<a href="#" class="contacts__btn">Заказать звонок</a>
-						</div>
-					</div>
-					<!--/.header__call-back-->
-				</div>
-				<!--/.header__contact-->
-			</div>
-			<!--/.footer__content-->
-		</div>
-		<!--/.container-->
-	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 
