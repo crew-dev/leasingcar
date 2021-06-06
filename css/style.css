@@ -1039,7 +1039,7 @@ input {
 	background-color: rgb(227, 73, 73);
 	background-image: linear-gradient(rgb(193, 102, 73) 0%, rgb(227, 73, 73) 99%, rgb(227, 73, 73) 100%);
 	color: rgb(255, 255, 255);
-	padding: 18px 64px;
+	padding: 18px 69px;
 	border-radius: 5px;
 	text-decoration: none;
 	font-family: "Russo One";
@@ -1119,30 +1119,6 @@ input[type="range"]::-webkit-slider-thumb {
 	border: 2px solid rgb(203, 91, 73);
 	border-radius: 50%;
 	cursor: pointer;
-}
-
-.cta,
-.btn__results {
-	background-color: rgb(227, 73, 73);
-	background-image: linear-gradient(rgb(193, 102, 73) 0%, rgb(227, 73, 73) 99%, rgb(227, 73, 73) 100%);
-	color: rgb(255, 255, 255);
-	border-radius: 5px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 70px;
-	text-decoration: none;
-	font-family: "Russo One";
-	font-size: 20px;
-	cursor: pointer;
-	position: relative;
-	overflow-x: hidden;
-	transition: all 0.2s ease-in-out 0s;
-}
-
-.input-inner {
-	position: relative;
-	margin-bottom: 18px;
 }
 
 .input__form,
@@ -1284,6 +1260,79 @@ label.error {
 .modal__icon {
 	width: 36px;
 	height: 36px;
+}
+
+.wallform__input,
+.phone {
+	width: 275px;
+	height: 56px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	background-color: #fff;
+	font-family: "Montserrat";
+	font-size: 16px;
+	color: #6e6e6e;
+	border: none;
+	box-shadow: inset -1px 3px 10px 1px #d8d8d8;
+	transition: 0.4s;
+}
+
+.input__content {
+	position: relative;
+	margin-bottom: 18px;
+}
+
+.wallform__input~.focus-border:before,
+.wallform__input~.focus-border:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #e34949;
+	transition: 0.3s;
+}
+
+.wallform__input~.focus-border:after {
+	top: auto;
+	bottom: 0;
+	left: auto;
+	right: 0;
+}
+
+.wallform__input~.focus-border i:before,
+.wallform__input~.focus-border i:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 0;
+	background-color: #e34949;
+	transition: 0.4s;
+}
+
+.wallform__input~.focus-border i:after {
+	left: auto;
+	right: 0;
+	top: auto;
+	bottom: 0;
+}
+
+.wallform__input:focus~.focus-border:before,
+.wallform__input:focus~.focus-border:after {
+	width: 100%;
+	transition: 0.3s;
+}
+
+.wallform__input:focus~.focus-border i:before,
+.wallform__input:focus~.focus-border i:after {
+	height: 100%;
+	transition: 0.4s;
 }
 
 .popup {
@@ -1716,7 +1765,6 @@ label.error {
 
 	.wallform__input {
 		max-width: 300px;
-		margin-bottom: 15px;
 	}
 
 	.wallform__button {
