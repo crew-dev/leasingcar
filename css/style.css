@@ -108,7 +108,7 @@ button {
 
 body {
 	font-family: 'Montserrat', sans-serif;
-	background: url(../img/bg_gray.jpg);
+	background: url(../img/bg_gray.png);
 	color: #fff;
 }
 
@@ -1162,7 +1162,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .wallform__content {
-	background: url(../img/png/keys.png) no-repeat 100% 120%, url(../img/bg_gray.jpg);
+	background: url(../img/png/keys.png) no-repeat 100% 120%, url(../img/bg_gray.png);
 	-webkit-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.1);
 	padding: 5px;
@@ -1252,7 +1252,7 @@ input[type="range"]::-webkit-slider-thumb {
 .popup__form {
 	position: relative;
 	background-color: #fff;
-	background: url(../img/png/keys.png) no-repeat 110% 110%, url(../img/bg_gray.jpg);
+	background: url(../img/png/keys.png) no-repeat 110% 110%, url(../img/bg_gray.png);
 	padding: 5px;
 	-webkit-transform: translateY(100%);
 	-ms-transform: translateY(100%);
@@ -1574,7 +1574,7 @@ label.error {
 .modal__content {
 	position: relative;
 	background-color: #fff;
-	background: url(../img/bg_gray.jpg);
+	background: url(../img/bg_gray.png);
 	border-radius: 5px;
 	-webkit-transform: translateY(100%);
 	-ms-transform: translateY(100%);
