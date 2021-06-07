@@ -1672,7 +1672,7 @@ label.error {
 	}
 
 	.advantages__item-05 {
-		right: -2%;
+		right: 0%;
 		top: 45%;
 	}
 
@@ -1817,7 +1817,7 @@ label.error {
 	}
 
 	.advantages__item-05 {
-		right: -2%;
+		right: 0%;
 		top: 50%;
 	}
 
@@ -1892,6 +1892,10 @@ label.error {
 		display: none;
 	}
 
+	.section__title {
+		padding-top: 70px;
+	}
+
 	.stmobile {
 		display: block;
 		color: #000;
@@ -1904,7 +1908,7 @@ label.error {
 	}
 
 	.stmobile__title {
-		margin-bottom: 70px;
+		margin-bottom: 50px;
 	}
 
 	.stmobile__content {
@@ -2004,6 +2008,10 @@ label.error {
 		font-size: 24px;
 	}
 
+	.calculator__submit {
+		padding: 30px 15px 75px;
+	}
+
 	.main__title {
 		font-family: "Russo One";
 		font-size: 24px;
@@ -2066,7 +2074,7 @@ label.error {
 	}
 
 	.advantages__item-05 {
-		right: -2%;
+		right: 0%;
 		top: 50%;
 	}
 
@@ -2093,7 +2101,7 @@ label.error {
 	}
 
 	.wallform__content {
-		max-width: 300px;
+		max-width: 370px;
 		margin-right: auto;
 		margin-left: auto;
 	}
