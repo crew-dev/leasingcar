@@ -1,3 +1,14 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 5 version
+*/
+
+@charset "UTF-8";
+
+/* обнуление всех CSS стилей */
+
 *,
 *:before,
 *:after {
@@ -951,13 +962,12 @@ header.scrolled .header__contacts .contacts__button {
 
 .calculator input {
 	width: 100%;
-	padding: 8px 8px 5px 10px;
+	padding: 6px 6px 4px 10px;
 	border: 2px solid white;
 	background-color: transparent;
 	color: white;
 	outline: none;
 	border-radius: 5px;
-	font-size: 16px;
 }
 
 input[type="range"] {
@@ -1006,7 +1016,6 @@ input[type="range"]::-webkit-slider-thumb {
 .left__title {
 	position: absolute;
 	padding-left: 10px;
-	font-size: 16px;
 }
 
 .left__input {
@@ -1062,7 +1071,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .form__text p {
 	display: block;
-	font-size: 16px;
+	font-size: 14px;
 	color: white;
 }
 
@@ -1576,10 +1585,37 @@ label.error {
 	padding: 5px;
 }
 
+.modal__info {
+	max-height: 500px;
+	overflow-y: scroll;
+}
+
+.modal__info::-webkit-scrollbar {
+	width: 7px;
+	border-radius: 50px;
+	background-color: #b8b8b8;
+}
+
+.modal__info::-webkit-scrollbar-thumb {
+	background-color: #4d4d4d;
+	border-radius: 50px;
+}
+
+.modal__list-title {
+	font-size: 20px;
+	font-weight: bolder;
+	margin: 20px 0;
+}
+
 .modal__frame {
 	border: 1px solid #dedada;
 	border-radius: 5px;
-	padding: 50px 300px;
+	padding: 50px 150px;
+}
+
+.modal__list-text {
+	line-height: 1.5;
+	padding: 0 35px;
 }
 
 .modal__close {
@@ -1587,6 +1623,15 @@ label.error {
 	top: 10px;
 	right: 10px;
 	cursor: pointer;
+}
+
+.modal__link {
+	text-decoration: underline;
+	transition: ease-in-out 0.1s;
+}
+
+.modal__link:hover {
+	opacity: 0.7;
 }
 
 .modal__icon {
@@ -1646,6 +1691,10 @@ label.error {
 		max-width: 1140px;
 	}
 
+	.modal__frame {
+		padding: 50px 100px;
+	}
+
 	.welcome__title {
 		font-size: 42px;
 		max-width: 620px;
@@ -1672,7 +1721,7 @@ label.error {
 	}
 
 	.advantages__item-05 {
-		right: 0%;
+		right: -2%;
 		top: 45%;
 	}
 
@@ -1817,7 +1866,7 @@ label.error {
 	}
 
 	.advantages__item-05 {
-		right: 0%;
+		right: -2%;
 		top: 50%;
 	}
 
@@ -1872,6 +1921,10 @@ label.error {
 		padding-bottom: 200px;
 	}
 
+	.modal__frame {
+		padding: 50px 50px;
+	}
+
 	.btn__results {
 		position: absolute;
 		display: -webkit-box;
@@ -1892,10 +1945,6 @@ label.error {
 		display: none;
 	}
 
-	.section__title {
-		padding-top: 70px;
-	}
-
 	.stmobile {
 		display: block;
 		color: #000;
@@ -1908,7 +1957,7 @@ label.error {
 	}
 
 	.stmobile__title {
-		margin-bottom: 50px;
+		margin-bottom: 70px;
 	}
 
 	.stmobile__content {
@@ -2004,12 +2053,12 @@ label.error {
 		max-width: 100%;
 	}
 
-	.section__title {
-		font-size: 24px;
+	.modal__frame {
+		padding: 50px 20px;
 	}
 
-	.calculator__submit {
-		padding: 30px 15px 75px;
+	.section__title {
+		font-size: 24px;
 	}
 
 	.main__title {
@@ -2074,7 +2123,7 @@ label.error {
 	}
 
 	.advantages__item-05 {
-		right: 0%;
+		right: -2%;
 		top: 50%;
 	}
 
@@ -2101,7 +2150,7 @@ label.error {
 	}
 
 	.wallform__content {
-		max-width: 370px;
+		max-width: 300px;
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -2139,7 +2188,7 @@ label.error {
 	}
 
 	.popup__form {
-		width: 92%;
+		width: 100%;
 	}
 
 	.popup__frame {
@@ -2199,6 +2248,12 @@ label.error {
 	.cta,
 	.btn__results {
 		padding: 25px 35px;
+	}
+	.modal__title {
+		font-size: 20px;
+	}
+	.modal__list-title {
+		font-size: 18px;
 	}
 }
 
