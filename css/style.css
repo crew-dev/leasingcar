@@ -2241,6 +2241,7 @@ label.error {
 
 	.calculator__submit {
 		font-size: 14px;
+		padding: 20px 13px 75px;
 	}
 }
 

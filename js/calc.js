@@ -6,6 +6,7 @@ const allCosts = document.querySelector('#allСosts');
 const calculatorItem = document.querySelectorAll('.calculator__item')
 const resultsTextSpan = document.querySelector('#resultsTextSpan')
 const totalNds = document.querySelector('#TotalNds')
+
 console.log(allCosts);
 for (let i = 0; i < calculatorItem.length; i++) {
   calculatorItem[i].addEventListener('click', (event) => {
@@ -21,8 +22,8 @@ for (let i = 0; i < calculatorItem.length; i++) {
             money.setAttribute('min', '200000')
                 money.value = '200000'
                 minCost.textContent = '200 000 P'
-                first_installment.value = '5%'
-                prepaid.value = '5'
+                // first_installment.value = '5%'
+                // prepaid.value = '5'
                 outcome_term_contract.value = '12 месяцев'
                 term_contract_input.value = '12'
                 result_sum()
@@ -33,8 +34,8 @@ for (let i = 0; i < calculatorItem.length; i++) {
                 money.setAttribute('min', '200000')
                 money.value = '200000'
                 minCost.textContent = '200 000 P'
-                first_installment.value = '5%'
-                prepaid.value = '5'
+                // first_installment.value = '5%'
+                // prepaid.value = '5'
                 outcome_term_contract.value = '12 месяцев'
                 term_contract_input.value = '12'
                 result_sum()
@@ -44,8 +45,8 @@ for (let i = 0; i < calculatorItem.length; i++) {
                 money.setAttribute('min', '1000000')
                 money.value = '1000000'
                 minCost.textContent = '1 000 000 P'
-                first_installment.value = '5%'
-                prepaid.value = '5'
+                // first_installment.value = '5%'
+                // prepaid.value = '5'
                 outcome_term_contract.value = '12 месяцев'
                 term_contract_input.value = '12'
                 result_sum()
@@ -55,8 +56,8 @@ for (let i = 0; i < calculatorItem.length; i++) {
                 money.setAttribute('min', '1000000')
                 money.value = '1000000'
                 minCost.textContent = '1 000 000 P'
-                first_installment.value = '5%'
-                prepaid.value = '5'
+                // first_installment.value = '5%'
+                // prepaid.value = '5'
                 outcome_term_contract.value = '12 месяцев'
                 term_contract_input.value = '12'
                 result_sum()
@@ -66,8 +67,8 @@ for (let i = 0; i < calculatorItem.length; i++) {
                 money.setAttribute('min', '1000000')
                 money.value = '1000000'
                 minCost.textContent = '1 000 000 P'
-                first_installment.value = '5%'
-                prepaid.value = '5'
+                // first_installment.value = '5%'
+                // prepaid.value = '5'
                 outcome_term_contract.value = '12 месяцев'
                 term_contract_input.value = '12'
                 result_sum()
@@ -77,8 +78,8 @@ for (let i = 0; i < calculatorItem.length; i++) {
                 money.setAttribute('min', '1000000')
                 money.value = '1000000'
                 minCost.textContent = '1 000 000 P'
-                first_installment.value = '5%'
-                prepaid.value = '5'
+                // first_installment.value = '5%'
+                // prepaid.value = '5'
                 outcome_term_contract.value = '12 месяцев'
                 term_contract_input.value = '12'
                 result_sum()
@@ -88,8 +89,8 @@ for (let i = 0; i < calculatorItem.length; i++) {
                 money.setAttribute('min', '1000000')
                 money.value = '1000000'
                 minCost.textContent = '1 000 000 P'
-                first_installment.value = '5%'
-                prepaid.value = '5'
+                // first_installment.value = '5%'
+                // prepaid.value = '5'
                 outcome_term_contract.value = '12 месяцев'
                 term_contract_input.value = '12'
                 result_sum()
@@ -99,8 +100,8 @@ for (let i = 0; i < calculatorItem.length; i++) {
               money.setAttribute('min', '1000000')
                 money.value = '1000000'
                 minCost.textContent = '1 000 000 P'
-                first_installment.value = '5%'
-                prepaid.value = '5'
+                // first_installment.value = '5%'
+                // prepaid.value = '5'
                 outcome_term_contract.value = '12 месяцев'
                 term_contract_input.value = '12'
                 result_sum()
@@ -194,9 +195,9 @@ for (y=0; y<=last_year; y++)
  const resultsTextList = document.querySelector('#resultTextList')
  avans(1);
  
- outcomeMoney.value = calculatorInputMoney.value + ' P';
- outcomeFirstInstallment.value = calculatorInputInstallment.value + "%";
- outcomeTermContract.value=calculatorInputTerm.value + ' месяцев';
+ outcomeMoney.value = calculatorInputMoney.value;
+ outcomeFirstInstallment.value = calculatorInputInstallment.value;
+ outcomeTermContract.value=calculatorInputTerm.value;
  resultsTextSpan.textContent = Math.round(rz(poln_plat+sumavans)) + " ₽";
 const nds2 = document.querySelector('#nds')
 n_nds()
@@ -223,4 +224,52 @@ const outcomeTermContract = document.querySelector('#outcome_term_contract');
 calculatorInputTerm.addEventListener('input', ()=>{
   result_sum()
 })
-;
+
+
+const monthlyPayment = document.querySelector('#monthlyPaymentSpan')
+const firstInstallment = document.querySelector('#first_installment');
+const carprice = document.querySelector('#carprice');
+const termContract = document.querySelector('#outcome_term_contract');
+const resultsText = document.querySelector('.results__text')
+const resultsTextList = document.querySelector('#resultTextList')
+
+
+carprice.addEventListener('blur', ()=>{
+    calculatorInputMoney.value = carprice.value
+    result_sum()
+
+})
+
+firstInstallment.addEventListener('blur', ()=>{
+    calculatorInputInstallment.value = firstInstallment.value
+    result_sum()
+
+})
+
+termContract.addEventListener('blur', ()=>{
+    calculatorInputTerm.value = termContract.value
+    result_sum()
+
+})
+
+    if (carprice.value<200000) {
+        carprice.value = 200000;
+    }
+    if (carprice.value>50000000) {
+        carprice.value=50000000
+    }
+    if (firstInstallment.value<0) {
+        firstInstallment.value = 0;
+    }
+    if (firstInstallment.value>50) {
+        firstInstallment.value=50
+    }
+    if (termContract.value<12) {
+        termContract.value = 12;
+    }
+    if (termContract.value>60) {
+        termContract.value=60
+    }
+
+// calcMinMax(carprice)
+// calcMinMax(firstInstallment)
